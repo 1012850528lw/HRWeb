@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link href="../plugin/bootstrap-3.3.7/dist/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    <link href="../plugin/bootstrap-table-develop/dist/bootstrap-table.css" rel="stylesheet" type="text/css"/>
+    <link href="../plugin/bootstrapValidator/bootstrapValidator.css"
+          rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="../pages/layerui/layui/css/layui.css" media="all" />
+</head>
+<body>
+<div class="layui-row">
+    <div class="layui-col-md2">
+        <ul id="menu_tree"></ul>
+    </div>
+    <div class="layui-col-md10">
+        <form class="form-horizontal" style="width: 98%">
+            <div class="form-group" style="margin-top: 5px;">
+                <div class="col-sm-2">
+                    <input type="button" class="btn btn-danger form-control" value="增加菜单" onclick="addShow()"/>
+                </div>
+                <label class="col-sm-1 control-label">菜单名称</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control" id="menuName" placeholder="菜单名称"/>
+                </div>
+                <label class="col-sm-1 control-label">菜单编号</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control" id="menuId" placeholder="菜单编号"/>
+                </div>
+                <label class="col-sm-1 control-label">上级编号</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control" id="pareMenuId" placeholder="上级菜单编号"/>
+                </div>
+                <div class="col-sm-1">
+                    <input type="button" class="btn btn-success form-control" value="查询" onclick="searchMenu()"/>
+                </div>
+            </div>
+        </form>
+        <table id="menu_table" data-toggle="table"></table>
+    </div>
+</div>
+</body>
+<script src="../pages/layerui/layui/layui.js"></script>
+<script src="../plugin/jquery/jquery-1.11.0.min.js"></script>
+<script src="../plugin/bootstrap-3.3.7/dist/js/bootstrap.js"></script>
+<script src="../plugin/bootstrap-table-develop/dist/bootstrap-table.js"></script>
+<script src="../plugin/bootstrap-table-zh-CN.js"></script>
+<script src="../plugin/bootstrapValidator/bootstrapValidator.js"></script>
+<script src="../plugin/layer/layer.js"></script>
+<script src="../js/xtgl/cdgl.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("#menu_table").bootstrapTable('destroy');
+        tableInit("/menu/getList");
+    });
+</script>
+</html>

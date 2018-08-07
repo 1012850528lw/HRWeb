@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.baozhu.layer.dao.UserDAO">
+  <sql id="Count_Record_Where_Clause">
+     where 1=1 
+    <if test="name != null and name != ''">
+       and name = #{name,jdbcType=VARCHAR}
+    </if>
+    <if test="workid != null and workid != ''">
+       and workId = #{workid,jdbcType=VARCHAR}
+    </if>
+    <if test="phone != null and phone != ''">
+       and phone = #{phone,jdbcType=VARCHAR}
+    </if>
+    <if test="password != null and password != ''">
+       and password = #{password,jdbcType=VARCHAR}
+    </if>
+    <if test="email != null and email != ''">
+       and email = #{email,jdbcType=VARCHAR}
+    </if>
+    <if test="loginName != null and loginName != ''">
+       and login_name = #{loginName,jdbcType=VARCHAR}
+    </if>
+  </sql>
+  <sql id="Record_Where_Clause">
+     where 1=1 
+    <if test="record.name != null and record.name != ''">
+       and name = #{record.name}
+    </if>
+    <if test="record.workid != null and record.workid != ''">
+       and workId = #{record.workid}
+    </if>
+    <if test="record.phone != null and record.phone != ''">
+       and phone = #{record.phone}
+    </if>
+    <if test="record.password != null and record.password != ''">
+       and password = #{record.password}
+    </if>
+    <if test="record.email != null and record.email != ''">
+       and email = #{record.email}
+    </if>
+    <if test="record.loginName != null and record.loginName != ''">
+       and login_name = #{record.loginName}
+    </if>
+  </sql>
+  <resultMap id="BaseResultMap" type="com.baozhu.layer.model.User">
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="workId" jdbcType="VARCHAR" property="workid" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="login_name" jdbcType="VARCHAR" property="loginName" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, name, workId, phone, password, email, login_name
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_sys_user
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from t_sys_user
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.baozhu.layer.model.User">
+    insert into t_sys_user (id, name, workId, 
+      phone, password, email, 
+      login_name)
+    values (#{id,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{workid,jdbcType=VARCHAR}, 
+      #{phone,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, 
+      #{loginName,jdbcType=VARCHAR})
+  </insert>
+  <select id="countByRecord" parameterType="com.baozhu.layer.model.User" resultType="java.lang.Long">
+    select count(*) from t_sys_user
+    <include refid="Count_Record_Where_Clause" />
+  </select>
+  <select id="selectByRecord" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+     from t_sys_user
+    <include refid="Record_Where_Clause" />
+    limit #{pageNumber},#{pageSize}
+  </select>
+  <update id="updateByPrimaryKey" parameterType="com.baozhu.layer.model.User">
+    update t_sys_user
+    set name = #{name,jdbcType=VARCHAR},
+      workId = #{workid,jdbcType=VARCHAR},
+      phone = #{phone,jdbcType=VARCHAR},
+      password = #{password,jdbcType=VARCHAR},
+      email = #{email,jdbcType=VARCHAR},
+      login_name = #{loginName,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

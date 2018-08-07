@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Insert title here</title>
+
+ <link href="../plugin/bootstrap-3.3.7/dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
+ <link href="../plugin/bootstrap-table-develop/dist/bootstrap-table.css" rel="stylesheet" type="text/css" />
+ <link href="../plugin/bootstrapValidator/bootstrapValidator.css"
+	rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<form class="form-horizontal" style="width: 98%">
+  <div class="form-group"  style="margin-top: 5px;">
+    <label  class="col-sm-1 control-label">用户名</label>
+    <div class="col-sm-2">
+      <input type="text" class="form-control" id="name" placeholder="用户名" />
+    </div>
+    <label  class="col-sm-1 control-label">工号</label>
+    <div class="col-sm-2">
+      <input type="text" class="form-control" id="workid" placeholder="工号" />
+    </div>
+	 <label  class="col-sm-1 control-label">登录名</label>
+    <div class="col-sm-2">
+      <input type="text" class="form-control" id="loginName" placeholder="登录名" />
+    </div>
+    <div class="col-sm-1">
+      <input onclick="search()" class="btn btn-success form-control" type="button"
+			value="查询" />
+    </div>
+    <div class="col-sm-2">
+      <input onclick="addShow()" class="btn btn-danger form-control" type="button"
+			value="增加用户" />
+    </div>
+  </div>
+
+ 
+</form>
+		<table id="data_table" data-toggle="table">
+		</table>
+</body>
+
+<script src="../plugin/jquery/jquery-1.11.0.min.js"></script>
+<script src="../plugin/bootstrap-3.3.7/dist/js/bootstrap.js"></script>
+<script src="../plugin/bootstrap-table-develop/dist/bootstrap-table.js"></script>
+<script src="../plugin/bootstrap-table-zh-CN.js"></script>
+<script src="../plugin/bootstrapValidator/bootstrapValidator.js"></script>
+<script src="../plugin/layer/layer.js"></script>
+<script src="../js/user.js"></script>
+<script type="text/javascript">
+$(function() {
+	$("#data_table").bootstrapTable('destroy');
+	tableInit("/user/getlist");
+
+});
+
+</script>
+</html>
