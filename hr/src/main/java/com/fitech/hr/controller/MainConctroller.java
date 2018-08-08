@@ -27,6 +27,11 @@ public class MainConctroller {
         return "sys/xtgl/cdgl_add";
     }
 
+    @RequestMapping("/jsgl")
+    public String lsgl(){
+        return "sys/xtgl/jsgl";
+    }
+
     @RequestMapping("/in")
     @ResponseBody
     public String index2(String aa) {

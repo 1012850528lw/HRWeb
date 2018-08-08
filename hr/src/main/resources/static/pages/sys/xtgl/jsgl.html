@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../plugin/bootstrap-3.3.7/dist/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    <link href="../plugin/bootstrap-table-develop/dist/bootstrap-table.css" rel="stylesheet" type="text/css"/>
+    <link href="../plugin/bootstrapValidator/bootstrapValidator.css"
+          rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="../pages/layerui/layui/css/layui.css" media="all" />
+</head>
+<body>
+    <form class="form-horizontal" style="width: 98%;margin-top: 20px">
+        <div class="form-group" style="margin-top: 5px;">
+            <div class="col-sm-2">
+                <input type="button" class="btn btn-danger form-control" value="新增" onclick=""/>
+            </div>
+            <label class="col-sm-1 control-label">角色编号</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="roleId" placeholder="角色编号"/>
+            </div>
+            <label class="col-sm-1 control-label">上级编号</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="pareRoleId" placeholder="上级编号"/>
+            </div>
+            <label class="col-sm-1 control-label">角色名称</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="roleName" placeholder="角色名称"/>
+            </div>
+            <div class="col-sm-1">
+                <input type="button" class="btn btn-success form-control" value="查询" onclick=""/>
+            </div>
+        </div>
+    </form>
+    <table id="role_table" data-toggle="table"></table>
+</body>
+<script src="../pages/layerui/layui/layui.js"></script>
+<script src="../plugin/jquery/jquery-1.11.0.min.js"></script>
+<script src="../plugin/bootstrap-3.3.7/dist/js/bootstrap.js"></script>
+<script src="../plugin/bootstrap-table-develop/dist/bootstrap-table.js"></script>
+<script src="../plugin/bootstrap-table-zh-CN.js"></script>
+<script src="../plugin/bootstrapValidator/bootstrapValidator.js"></script>
+<script src="../plugin/layer/layer.js"></script>
+<script src="../js/xtgl/jsgl.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("#role_table").bootstrapTable('destroy');
+        tableInit("/role/getList");
+    });
+</script>
+</html>

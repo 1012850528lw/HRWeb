@@ -157,7 +157,6 @@ function buildChildren(menuId) {
             obj.pareId = e.pareMenuId;
             treeChild.push(obj);
         }
-
     });
     return treeChild;
 }
@@ -286,10 +285,10 @@ $('#form_menu_edit').bootstrapValidator({
     },
     fields: {
         menuId: {
-            message: '用户名不能为空',//默认提示信息
+            message: '编号不能为空',//默认提示信息
             validators: {
                 notEmpty: {
-                    message: '用户名必填不能为空'
+                    message: '编号必填不能为空'
                 }
             }
         }

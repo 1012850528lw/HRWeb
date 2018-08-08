@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fitech.hr.dao.RoleManageDao">
+    <resultMap id="RoleResultMap" type="com.fitech.hr.model.RoleManage">
+        <result column="ROLE_ID" jdbcType="VARCHAR" property="roleId"/>
+        <result column="PARE_ROLE_ID" jdbcType="VARCHAR" property="pareRoleId"/>
+        <result column="ROLE_NAME" jdbcType="VARCHAR" property="roleName"/>
+        <result column="ROLE_TYPE_CODE" jdbcType="VARCHAR" property="roleTypeCode"/>
+        <result column="CREATE_EMPLOYEE_ID" jdbcType="VARCHAR" property="createEmployeeId"/>
+        <result column="CREATE_TIME" jdbcType="DATE" property="createTime"/>
+        <result column="MDY_EMPLOYEE_ID" jdbcType="VARCHAR" property="mdyEmployeeId"/>
+        <result column="MDY_TIME" jdbcType="DATE" property="mdyTime"/>
+        <result column="REMARK" jdbcType="VARCHAR" property="remark"/>
+    </resultMap>
+
+    <sql id="Count_Record_Where_Clause">
+        where 1=1
+        <if test="roleId != null and roleId != ''">
+            and ROLE_ID = #{roleId,jdbcType=VARCHAR}
+        </if>
+        <if test="pareRoleId != null and pareRoleId != ''">
+            and PARE_ROLE_ID = #{pareRoleId,jdbcType=VARCHAR}
+        </if>
+        <if test="roleName != null and roleName != ''">
+            and ROLE_NAME = #{roleName,jdbcType=VARCHAR}
+        </if>
+    </sql>
+    <sql id="Record_Where_Clause">
+        where 1=1
+        <if test="record.roleId != null and record.roleId != ''">
+            and ROLE_ID = #{record.roleId}
+        </if>
+        <if test="record.pareRoleId != null and record.pareRoleId != ''">
+            and PARE_ROLE_ID = #{record.pareRoleId}
+        </if>
+        <if test="record.roleName != null and record.roleName != ''">
+            and ROLE_NAME = #{record.roleName}
+        </if>
+    </sql>
+
+    <sql id="Role_Columns_List">
+        ROLE_ID, PARE_ROLE_ID, ROLE_NAME, ROLE_TYPE_CODE, CREATE_EMPLOYEE_ID, CREATE_TIME, MDY_EMPLOYEE_ID, MDY_TIME, REMARK
+    </sql>
+
+    <select id="countByRecord" parameterType="com.fitech.hr.model.RoleManage" resultType="java.lang.Long">
+        select count(*) from hr_sys_role
+        <include refid="Count_Record_Where_Clause"/>
+    </select>
+
+    <select id="selectByRecord" resultMap="RoleResultMap">
+        select
+        <include refid="Role_Columns_List"/>
+        from hr_sys_role
+        <include refid="Record_Where_Clause"/>
+        limit #{pageNumber}, #{pageSize}
+    </select>
+
+</mapper>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fitech.hr.dao.MenuManageDAO">
+    <sql id="Count_Record_Where_Clause">
+        where 1=1
+        <if test="pareMenuId != null and pareMenuId != ''">
+            and PARE_MENU_ID = #{pareMenuId,jdbcType=VARCHAR}
+        </if>
+        <if test="menuIcon != null and menuIcon != ''">
+            and MENU_ICON = #{menuIcon,jdbcType=VARCHAR}
+        </if>
+        <if test="isEnable != null and isEnable != ''">
+            and IS_ENABLE = #{isEnable,jdbcType=VARCHAR}
+        </if>
+        <if test="menuName != null and menuName != ''">
+            and MENU_NAME = #{menuName,jdbcType=VARCHAR}
+        </if>
+        <if test="menuUrl != null and menuUrl != ''">
+            and MENU_URL = #{menuUrl,jdbcType=VARCHAR}
+        </if>
+        <if test="menuOrder != null">
+            and MENU_ORDER = #{menuOrder,jdbcType=INTEGER}
+        </if>
+        <!--<if test="remark != null and remark != ''">-->
+            <!--and REMARK = #{remark,jdbcType=VARCHAR}-->
+        <!--</if>-->
+    </sql>
+
+    <sql id="Record_Where_Clause">
+        where 1=1
+        <if test="record.menuId != null and record.menuId != ''">
+            and MENU_ID = #{record.menuId}
+        </if>
+        <if test="record.pareMenuId != null and record.pareMenuId != ''">
+            and PARE_MENU_ID = #{record.pareMenuId}
+        </if>
+        <if test="record.menuName != null and record.menuName != ''">
+            and MENU_NAME = #{record.menuName}
+        </if>
+    </sql>
+
+    <resultMap id="MenuResultMap" type="com.fitech.hr.model.MenuManage">
+        <!--<id column="menuId" jdbcType="VARCHAR" property="menuId"/>-->
+        <result column="MENU_ID" jdbcType="VARCHAR" property="menuId"/>
+        <result column="PARE_MENU_ID" jdbcType="VARCHAR" property="pareMenuId"/>
+        <result column="MENU_ICON" jdbcType="VARCHAR" property="menuIcon"/>
+        <result column="IS_ENABLE" jdbcType="VARCHAR" property="isEnable"/>
+        <result column="MENU_NAME" jdbcType="VARCHAR" property="menuName"/>
+        <result column="MENU_URL" jdbcType="VARCHAR" property="menuUrl"/>
+        <result column="MENU_ORDER" jdbcType="INTEGER" property="menuOrder"/>
+    </resultMap>
+
+    <sql id="Menu_Columns_List">
+        MENU_ID, PARE_MENU_ID, MENU_ICON, IS_ENABLE, MENU_NAME, MENU_URL, MENU_ORDER
+    </sql>
+
+    <select id="countByRecord" parameterType="com.fitech.hr.model.MenuManage" resultType="java.lang.Long">
+        select count(*) from hr_sys_menu
+        <include refid="Count_Record_Where_Clause"/>
+    </select>
+
+    <select id="selectByRecord"  resultMap="MenuResultMap">
+        select
+        <include refid="Menu_Columns_List"/>
+        from hr_sys_menu
+        <include refid="Record_Where_Clause"/>
+        limit #{pageNumber},#{pageSize}
+    </select>
+
+    <insert id="insertMenu" parameterType="com.fitech.hr.model.MenuManage">
+        insert into hr_sys_menu values(#{menuId,jdbcType=VARCHAR}, #{pareMenuId,jdbcType=VARCHAR}, #{menuIcon,jdbcType=VARCHAR}
+        , #{isEnable,jdbcType=VARCHAR}, #{menuName,jdbcType=VARCHAR}, #{menuUrl,jdbcType=VARCHAR}, #{menuOrder,jdbcType=INTEGER},
+        #{remark,jdbcType=VARCHAR})
+    </insert>
+
+    <update id="updateByMenuId" parameterType="com.fitech.hr.model.MenuManage">
+        update hr_sys_menu
+        set PARE_MENU_ID = #{pareMenuId,jdbcType=VARCHAR},
+          MENU_ICON = #{menuIcon,jdbcType=VARCHAR},
+          IS_ENABLE = #{isEnable,jdbcType=VARCHAR},
+          MENU_NAME = #{menuName,jdbcType=VARCHAR},
+          MENU_URL = #{menuUrl,jdbcType=VARCHAR},
+          MENU_ORDER = #{menuOrder,jdbcType=INTEGER},
+          REMARK = #{remark,jdbcType=VARCHAR}
+          where MENU_ID = #{menuId,jdbcType=VARCHAR}
+    </update>
+
+    <select id="selectByMenuId" parameterType="java.lang.String" resultMap="MenuResultMap">
+        select
+        MENU_ID, PARE_MENU_ID, MENU_ICON, IS_ENABLE, MENU_NAME, MENU_URL, MENU_ORDER, REMARK
+        from hr_sys_menu
+        where MENU_ID = #{menuId,jdbcType=VARCHAR}
+    </select>
+
+    <delete id="deleteByMenuId" parameterType="java.lang.String">
+        delete from hr_sys_menu
+        where MENU_ID = #{menuId,jdbcType=VARCHAR}
+    </delete>
+
+    <select id="selectAllMenu" resultMap="MenuResultMap">
+        select MENU_ID, PARE_MENU_ID, MENU_NAME
+        from hr_sys_menu
+    </select>
+
+</mapper>
