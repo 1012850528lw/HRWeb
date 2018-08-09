@@ -3,7 +3,23 @@ function treeInit() {
     layui.use('tree', function () {
         layui.tree({
             elem: '#menu_tree',
-            nodes: getTreeData()
+            nodes: getTreeData(),
+            click: function(item){
+                var tableData = []
+                $.ajax({
+                    type: "get",
+                    url: "/menu/selectTree?menuId="+item.menuId,
+                    data: "",
+                    async: false,
+                    dataType: "json",
+                    success: function (data) {
+                        tableData = JSON.parse(JSON.stringify(data));
+                        console.log(tableData);
+                        $("#menu_table").bootstrapTable("removeAll");
+                        $("#menu_table").bootstrapTable('append',tableData);
+                    }
+                });
+            }
         })
     });
 }
@@ -74,19 +90,17 @@ function tableInit(url) {
             }
         ]
     });
-
-    function queryParams(params) {
-        var temp = {
-            pageSize: params.limit,
-            pageNumber: params.offset,
-            menuName: $("#menuName").val(),
-            menuId: $("#menuId").val(),
-            pareMenuId: $("#pareMenuId").val()
-        };
-        return temp;
-    }
 }
-
+function queryParams(params) {
+    var temp = {
+        pageSize: params.limit,
+        pageNumber: params.offset,
+        menuName: $("#menuName").val(),
+        menuId: $("#menuId").val(),
+        pareMenuId: $("#pareMenuId").val()
+    };
+    return temp;
+}
 function addShow() {
     parent.layer.open({
         type: 2,
@@ -122,10 +136,10 @@ function getTreeData() {
     });
     treeData.forEach(function (e) {
         if(e.pareMenuId === ""){
-            var obj = {id: "", name: "", pareId: "", children: new Array()};
-            obj.id = e.menuId;
+            var obj = {menuId: "", name: "", pareMenuId: "", children: new Array()};
+            obj.menuId = e.menuId;
             obj.name = e.menuName;
-            obj.pareId = e.pareMenuId;
+            obj.pareMenuId = e.pareMenuId;
             obj.children = buildChildren(e.menuId);
             rootTree.push(obj);
         }
@@ -144,17 +158,17 @@ function buildChildren(menuId) {
     });
     nTypeData.forEach(function (e) {
         if(e.menuId !== null && e.menuId !== ""){
-            var obj = {id: "", name: "", pareId: "", children: new Array()};
-            obj.id = e.menuId;
+            var obj = {menuId: "", name: "", pareMenuId: "", children: new Array()};
+            obj.menuId = e.menuId;
             obj.name = e.menuName;
-            obj.pareId = e.pareMenuId;
+            obj.pareMenuId = e.pareMenuId;
             obj.children = buildChildren(e.menuId);
             treeChild.push(obj);
         }else{
-            var obj = {id: "", name: "", pareId: "", children: new Array()};
-            obj.id = e.menuId;
+            var obj = {menuId: "", name: "", pareMenuId: "", children: new Array()};
+            obj.menuId = e.menuId;
             obj.name = e.menuName;
-            obj.pareId = e.pareMenuId;
+            obj.pareMenuId = e.pareMenuId;
             treeChild.push(obj);
         }
     });

@@ -32,6 +32,10 @@ public class MainConctroller {
         return "sys/xtgl/jsgl";
     }
 
+    @RequestMapping("/yhgl")
+    public String yhgl(){
+        return "sys/xtgl/yhgl";
+    }
     @RequestMapping("/in")
     @ResponseBody
     public String index2(String aa) {

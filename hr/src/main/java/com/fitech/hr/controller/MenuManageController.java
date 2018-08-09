@@ -26,6 +26,12 @@ public class MenuManageController {
     }
 
     @ResponseBody
+    @RequestMapping("selectTree")
+    public List<MenuManage> selectByTree(String menuId){
+        return this.menuManagerService.selectByTree(menuId);
+    }
+
+    @ResponseBody
     @RequestMapping("getAll")
     public List<MenuManage> selectAllMenu(){
         return this.menuManagerService.selectAllMenu();

@@ -9,6 +9,8 @@ public interface MenuManageService {
 
     JSONObject selectByRecord(MenuManage record, int pageSize, int pageNumber);
 
+    List<MenuManage> selectByTree(String menuId);
+
     int insertMenu(MenuManage record);
 
     int updateByMenuId(MenuManage record);
