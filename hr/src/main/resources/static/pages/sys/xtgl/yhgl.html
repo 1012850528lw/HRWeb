@@ -12,23 +12,13 @@
 <body>
 <form class="form-horizontal" style="width: 98%;margin-top: 20px;">
     <div class="form-group" style="margin-top: 5px;">
+        <div class="col-sm-8"></div>
+        <label class="col-sm-1 control-label">员工号</label>
         <div class="col-sm-2">
-            <input type="button" class="btn btn-danger form-control" value="新增" onclick=""/>
-        </div>
-        <label class="col-sm-1 control-label">角色编号</label>
-        <div class="col-sm-2">
-            <input type="text" class="form-control" id="roleId" placeholder="角色编号"/>
-        </div>
-        <label class="col-sm-1 control-label">上级编号</label>
-        <div class="col-sm-2">
-            <input type="text" class="form-control" id="pareRoleId" placeholder="上级编号"/>
-        </div>
-        <label class="col-sm-1 control-label">角色名称</label>
-        <div class="col-sm-2">
-            <input type="text" class="form-control" id="roleName" placeholder="角色名称"/>
+            <input type="text" class="col-sm-2 form-control" id="employeeId" placeholder="员工号"/>
         </div>
         <div class="col-sm-1">
-            <input type="button" class="btn btn-success form-control" value="查询" onclick=""/>
+            <input type="button" class="btn btn-success form-control" onclick="searchUser()" value="查询"/>
         </div>
     </div>
 </form>
@@ -44,8 +34,8 @@
 <script src="../js/xtgl/yhgl.js"></script>
 <script type="text/javascript">
     $(function () {
-        //$("#user_table").bootstrapTable('destroy');
-        //tableInit("/role/getList");
+        $("#user_table").bootstrapTable('destroy');
+        tableInit("/user/getList");
     });
 </script>
 </html>

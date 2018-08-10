@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../plugin/bootstrap-3.3.7/dist/css/bootstrap.css"
+          rel="stylesheet" type="text/css" />
+    <link href="../plugin/bootstrapValidator/bootstrapValidator.css"
+          rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../pages/layerui/layui/css/layui.css" media="all" />
+</head>
+<body>
+<div class="container" style="margin-top: 20px">
+    <form class="form-horizontal center-block" id="form_role_edit">
+        <div class="form-group">
+            <label class="col-sm-2 control-label">角色编号</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="roleId" name="roleId" th:field="${role.roleId}" placeholder="角色编号" disabled="disabled"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">上级角色编号</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="pareRoleId" name="pareRoleId" th:field="${role.pareRoleId}" placeholder="上级角色编号"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">角色名称</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="roleName" name="roleName" th:field="${role.roleName}" placeholder="角色名称"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">角色类型代码</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="roleTypeCode" name="roleTypeCode" th:field="${role.roleTypeCode}" placeholder="角色类型代码"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">创建员工号</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="createEmployeeId" name="createEmployeeId" th:field="${role.createEmployeeId}" placeholder="创建员工号"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">创建时间</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="createTime" name="createTime" th:field="${role.createTime}" placeholder="创建时间"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">修改员工号</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="mdyEmployeeId" name="mdyEmployeeId" th:field="${role.mdyEmployeeId}" placeholder="修改员工号"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">修改时间</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="mdyTime" name="mdyTime" th:field="${role.mdyTime}" placeholder="修改时间"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">备注</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="remark" name="remark" th:field="${role.remark}" placeholder="备注"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-10"></div>
+            <button type="submit" class="col-sm-1 btn-success">修改</button>
+            <button type="button" class="col-sm-1 btn-default" onclick="closeAddShow()">取消</button>
+        </div>
+    </form>
+</div>
+</body>
+<script src="../plugin/jquery/jquery-1.11.0.min.js"></script>
+<script src="../plugin/bootstrap-3.3.7/dist/js/bootstrap.js"></script>
+<script src="../plugin/bootstrapValidator/bootstrapValidator.js"></script>
+<script src="../pages/layerui/layui/layui.js"></script>
+<script src="../plugin/layer/layer.js"></script>
+<script src="../js/xtgl/jsgl.js"></script>
+</html>

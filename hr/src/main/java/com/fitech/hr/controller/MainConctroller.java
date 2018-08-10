@@ -12,9 +12,9 @@ public class MainConctroller {
         return "layerui/index";
     }
 
-    @RequestMapping("/user")
+    @RequestMapping("/main")
     public String user() {
-        return "sys/user/user_main";
+        return "sys/main/welcome";
     }
 
     @RequestMapping("/cdgl")
@@ -28,14 +28,25 @@ public class MainConctroller {
     }
 
     @RequestMapping("/jsgl")
-    public String lsgl(){
+    public String jsgl(){
         return "sys/xtgl/jsgl";
+    }
+
+    @RequestMapping("/jsgl_add")
+    public String jsglAdd(){
+        return "sys/xtgl/jsgl_add";
     }
 
     @RequestMapping("/yhgl")
     public String yhgl(){
         return "sys/xtgl/yhgl";
     }
+
+    @RequestMapping("/password")
+    public String password(){
+        return "sys/main/password";
+    }
+
     @RequestMapping("/in")
     @ResponseBody
     public String index2(String aa) {

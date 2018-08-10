@@ -7,5 +7,11 @@ public interface RoleManageService {
 
     JSONObject selectByRecord(RoleManage record, int pageSize, int pageNumber);
 
+    int insertRole(RoleManage record);
 
+    RoleManage selectByRoleId(String roleId);
+
+    int updateByRoleId(RoleManage record);
+
+    int deleteByRoleId(String roleId);
 }

@@ -20,4 +20,24 @@ public class RoleManageServiceImpl implements RoleManageService {
         str.put("rows", this.roleManageDao.selectByRecord(record,pageSize,pageNumber));
         return str;
     }
+
+    @Override
+    public int insertRole(RoleManage record) {
+        return this.roleManageDao.insertRole(record);
+    }
+
+    @Override
+    public RoleManage selectByRoleId(String roleId) {
+        return this.roleManageDao.selectByRoleId(roleId);
+    }
+
+    @Override
+    public int updateByRoleId(RoleManage record) {
+        return this.roleManageDao.updateByRoleId(record);
+    }
+
+    @Override
+    public int deleteByRoleId(String roleId) {
+        return this.roleManageDao.deleteByRoleId(roleId);
+    }
 }

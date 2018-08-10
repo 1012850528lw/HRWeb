@@ -55,4 +55,36 @@
         limit #{pageNumber}, #{pageSize}
     </select>
 
+    <insert id="insertRole" parameterType="com.fitech.hr.model.RoleManage">
+        insert into hr_sys_role
+        values(#{roleId,jdbcType=VARCHAR}, #{pareRoleId,jdbcType=VARCHAR}, #{roleName,jdbcType=VARCHAR},
+        #{roleTypeCode,jdbcType=VARCHAR}, #{createEmployeeId,jdbcType=VARCHAR}, #{createTime,jdbcType=DATE},
+        #{mdyEmployeeId,jdbcType=VARCHAR}, #{mdyTime,jdbcType=DATE}, #{remark,jdbcType=VARCHAR})
+    </insert>
+
+    <select id="selectByRoleId" parameterType="java.lang.String" resultMap="RoleResultMap">
+        select
+        <include refid="Role_Columns_List"/>
+        from hr_sys_role
+        where ROLE_ID = #{roleId,jdbcType=VARCHAR}
+    </select>
+
+    <update id="updateByRoleId" parameterType="com.fitech.hr.model.RoleManage">
+        update hr_sys_role
+        set
+        PARE_ROLE_ID = #{pareRoleId,jdbcType=VARCHAR},
+        ROLE_NAME = #{roleName,jdbcType=VARCHAR},
+        ROLE_TYPE_CODE = #{roleTypeCode,jdbcType=VARCHAR},
+        CREATE_EMPLOYEE_ID = #{createEmployeeId,jdbcType=VARCHAR},
+        CREATE_TIME = #{createTime,jdbcType=DATE},
+        MDY_EMPLOYEE_ID = #{mdyEmployeeId,jdbcType=VARCHAR},
+        MDY_TIME = #{mdyTime,jdbcType=DATE},
+        REMARK = #{remark,jdbcType=VARCHAR}
+        where ROLE_ID = #{roleId,jdbcType=VARCHAR}
+    </update>
+
+    <delete id="deleteByRoleId" parameterType="java.lang.String">
+        delete from hr_sys_role
+        where ROLE_ID = #{roleId,jdbcType=VARCHAR}
+    </delete>
 </mapper>

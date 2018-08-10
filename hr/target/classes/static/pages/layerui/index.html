@@ -53,8 +53,7 @@
             </a>
             <dl class="layui-nav-child">
               <dd><a lay-href="set/user/info.html">基本资料</a></dd>
-              <dd><a lay-href="set/user/password.html">修改密码</a></dd>
-              <hr>
+              <dd><a  onclick="updatePaw()">修改密码</a></dd>
               <dd layadmin-event="logout" style="text-align: center;"><a>退出</a></dd>
             </dl>
           </li>
@@ -160,7 +159,7 @@
       <!-- 主体内容 -->
       <div class="layui-body" id="LAY_app_body">
         <div class="layadmin-tabsbody-item layui-show">
-          <iframe src="/user" frameborder="0" class="layadmin-iframe"></iframe>
+          <iframe src="/main" frameborder="0" class="layadmin-iframe"></iframe>
         </div>
       </div>
       
@@ -170,6 +169,7 @@
   </div>
 
   <script src="../pages/layerui/layui/layui.js"></script>
+  <script src="../pages/layerui/layui/index.js"></script>
  <script>
   layui.config({
     base: '../pages/layerui/' //静态资源所在路径

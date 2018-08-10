@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fitech.hr.dao.UserManageDAO">
+    <sql id="Count_Record_Where_Clause">
+        where 1=1
+        <if test="employeeId != null and employeeId != ''">
+            and EMPLOYEE_ID = #{employeeId,jdbcType=VARCHAR}
+        </if>
+        <if test="password != null and password != ''">
+            and PASSWORD = #{password,jdbcType=VARCHAR}
+        </if>
+        <if test="userOpenStatus != null and userOpenStatus != ''">
+            and USER_OPEN_STATUS = #{userOpenStatus,jdbcType=VARCHAR}
+        </if>
+        <if test="loginHomePage != null and loginHomePage != ''">
+            and LOGIN_HOME_PAGE = #{loginHomePage,jdbcType=VARCHAR}
+        </if>
+        <if test="authOrganId != null and authOrganId != ''">
+            and AUTH_ORGAN_ID = #{authOrganId,jdbcType=VARCHAR}
+        </if>
+        <if test="startDate != null and startDate != ''">
+            and START_DATE = #{startDate,jdbcType=DATE}
+        </if>
+        <if test="stopDate != null and stopDate != ''">
+            and STOP_DATE = #{stopDate,jdbcType=DATE}
+        </if>
+    </sql>
+
+    <sql id="Count_Where_Clause">
+        where 1=1
+        <if test="record.employeeId != null and record.employeeId != ''">
+            and EMPLOYEE_ID = #{record.employeeId}
+        </if>
+    </sql>
+
+    <resultMap id="UserResultMap" type="com.fitech.hr.model.UserManage">
+        <result column="EMPLOYEE_ID" property="employeeId" jdbcType="VARCHAR"/>
+        <result column="PASSWORD" property="password" jdbcType="VARCHAR"/>
+        <result column="USER_OPEN_STATUS" property="userOpenStatus" jdbcType="VARCHAR"/>
+        <result column="LOGIN_HOME_PAGE" property="loginHomePage" jdbcType="VARCHAR"/>
+        <result column="AUTH_ORGAN_Id" property="authOrganId" jdbcType="VARCHAR"/>
+        <result column="START_DATE" property="startDate" jdbcType="DATE"/>
+        <result column="STOP_DATE" property="stopDate" jdbcType="DATE"/>
+    </resultMap>
+
+    <sql id="User_Cloumns_List">
+        EMPLOYEE_ID, PASSWORD, USER_OPEN_STATUS, LOGIN_HOME_PAGE, AUTH_ORGAN_ID, START_DATE, STOP_DATE
+    </sql>
+
+    <select id="countByRecord" parameterType="com.fitech.hr.model.UserManage" resultType="java.lang.Long">
+        select count(*) from hr_sys_user
+        <include refid="Count_Record_Where_Clause"/>
+    </select>
+
+    <select id="selectByRecord" resultMap="UserResultMap">
+        select
+        <include refid="User_Cloumns_List"/>
+        from hr_sys_user
+        <include refid="Count_Where_Clause"/>
+        limit #{pageNumber,jdbcType=VARCHAR},#{pageSize,jdbcType=VARCHAR}
+    </select>
+
+    <select id="selectByEmployeeId" parameterType="java.lang.String" resultMap="UserResultMap">
+        select
+        <include refid="User_Cloumns_List"/>
+        from hr_sys_user
+        where EMPLOYEE_ID = #{employeeId,jdbcType=VARCHAR}
+    </select>
+
+    <update id="updateByUserId" parameterType="com.fitech.hr.model.UserManage">
+        update hr_sys_user set
+        PASSWORD = #{password,jdbcType=VARCHAR},
+        USER_OPEN_STATUS = #{userOpenStatus,jdbcType=VARCHAR},
+        LOGIN_HOME_PAGE = #{loginHomePage,jdbcType=VARCHAR},
+        AUTH_ORGAN_ID = #{authOrganId,jdbcType=VARCHAR},
+        START_DATE = #{startDate,jdbcType=DATE},
+        STOP_DATE = #{stopDate,jdbcType=DATE}
+        where EMPLOYEE_ID = #{employeeId,jdbcType=VARCHAR}
+    </update>
+
+    <delete id="deleteByUserId" parameterType="java.lang.String">
+        delete from hr_sys_user
+        where EMPLOYEE_ID = #{employeeId,jdbcType=VARCHAR}
+    </delete>
+
+    <update id="initPaw" parameterType="java.lang.String">
+        update hr_sys_user set
+        PASSWORD = '123456'
+        where EMPLOYEE_ID = #{employeeId,jdbcType=VARCHAR}
+    </update>
+
+    <update id="updatePassword" parameterType="com.fitech.hr.model.UserManage">
+        update hr_sys_user set
+        PASSWORD = #{password,jdbcType=VARCHAR}
+        where EMPLOYEE_ID = #{employeeId,jdbcType=VARCHAR}
+    </update>
+</mapper>
