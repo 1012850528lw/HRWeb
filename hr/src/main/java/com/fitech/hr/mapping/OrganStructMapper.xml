@@ -10,6 +10,23 @@
         <result column="ESTABLISH_DATE" property="establishDate" jdbcType="DATE"/>
         <result column="REVOKE_DATE" property="revokeDate" jdbcType="DATE"/>
         <result column="REVOKE_REASON" property="revokeReason" jdbcType="VARCHAR"/>
-        
+        <result column="HEAD_EMPLOYEE_ID" property="headEmployeeId" jdbcType="VARCHAR"/>
+        <result column="UN_SOCIAL_CREDIT_CODE" property="unSocialCreditCode" jdbcType="VARCHAR"/>
+        <result column="ORGAN_ADDRESS" property="organAddress" jdbcType="VARCHAR"/>
+        <result column="CONTACT_NUMBER" property="contactNumber" jdbcType="VARCHAR"/>
+        <result column="BASIC_DEPOSIT_ACCT" property="basicDepositAcct" jdbcType="VARCHAR"/>
+        <result column="BASIC_DEPOSIT_BANK" property="basicDepositBank" jdbcType="VARCHAR"/>
+        <result column="ORGAN_STATUS" property="organStatus" jdbcType="VARCHAR"/>
+        <result column="CREATE_EMPLOYEE_ID" property="createEmployeeId" jdbcType="VARCHAR"/>
+        <result column="MDY_EMPLOYEE_ID" property="mdyEmployeeId" jdbcType="VARCHAR"/>
+        <result column="CREATE_TIME" property="createTime" jdbcType="DATE"/>
+        <result column="MDY_TIME" property="mdyTime" jdbcType="DATE"/>
+        <result column="POST" property="post" jdbcType="VARCHAR"/>
+        <result column="FAX" property="fax" jdbcType="VARCHAR"/>
+        <result column="ORGAN_LEVEL" property="organLevel" jdbcType="VARCHAR"/>
     </resultMap>
+
+    <select id="selectAllOrgan" resultMap="OrganStructResult">
+        select * from hr_sys_organ
+    </select>
 </mapper>

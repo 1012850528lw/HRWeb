@@ -3,12 +3,33 @@ function treeInit() {
     layui.use('tree', function () {
         layui.tree({
             elem: '#organ_tree',
-            nodes: []
+            nodes: getTreeData()
         });
 
     });
 }
 treeInit();
+
+var midData = [];
+function getTreeData() {
+    var treeData = [];
+    var rootTree = new Array();
+    var treeNode;
+    $.ajax({
+        type: 'get',
+        url: '/organ/getAll',
+        async: false,
+        dataType: 'json',
+        success: function (data) {
+            treeData = JSON.parse(JSON.stringify(data));
+            midData = JSON.parse(JSON.stringify(data));
+        }
+    });
+    treeData.forEach(function (value) {
+
+    })
+}
+
 
 function tableInit(url) {
     $("#organ_table").bootstrapTable({
