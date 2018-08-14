@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../plugin/bootstrap-3.3.7/dist/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    <link href="../plugin/bootstrap-table-develop/dist/bootstrap-table.css" rel="stylesheet" type="text/css"/>
+    <link href="../plugin/bootstrapValidator/bootstrapValidator.css"
+          rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="../pages/layerui/layui/css/layui.css" media="all" />
+</head>
+<body>
+    <div class="layui-row">
+        <div class="layui-col-md2">
+            <ul id="organ_tree" style="margin-top: 20px;margin-left: 20px;"></ul>
+        </div>
+        <div class="layui-col-md10">
+            <table id="organ_table" data-toggle="table"></table>
+        </div>
+    </div>
+</body>
+<script src="../pages/layerui/layui/layui.js"></script>
+<script src="../plugin/jquery/jquery-1.11.0.min.js"></script>
+<script src="../plugin/bootstrap-3.3.7/dist/js/bootstrap.js"></script>
+<script src="../plugin/bootstrap-table-develop/dist/bootstrap-table.js"></script>
+<script src="../plugin/bootstrap-table-zh-CN.js"></script>
+<script src="../plugin/bootstrapValidator/bootstrapValidator.js"></script>
+<script src="../plugin/layer/layer.js"></script>
+<script src="../js/zzjggl/zzjgwh.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("#organ_table").bootstrapTable('destroy');
+        tableInit("/organ/getList");
+    });
+</script>
+</html>

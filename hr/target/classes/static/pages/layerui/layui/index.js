@@ -4,7 +4,7 @@ function updatePaw() {
         title: '修改密码',
         shade: 0.1,
         shadeClose: true,
-        area: ['50%', '35%'],
+        area: ['50%', '50%'],
         content: '/password',
         end: function () {
 

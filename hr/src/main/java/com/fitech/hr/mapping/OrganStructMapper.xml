@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fitech.hr.dao.OrganStructDAO">
+    <resultMap id="OrganStructResult" type="com.fitech.hr.model.OrganStruct">
+        <result column="ORGAN_ID" property="organId" jdbcType="VARCHAR"/>
+        <result column="PARE_ORGAN_ID" property="pareOrganId" jdbcType="VARCHAR"/>
+        <result column="ORGAN_NAME" property="organName" jdbcType="VARCHAR"/>
+        <result column="ORGAN_TYPE_CODE" property="organTypeCode" jdbcType="VARCHAR"/>
+        <result column="ORGAN_NOTE" property="organNote" jdbcType="VARCHAR"/>
+        <result column="ESTABLISH_DATE" property="establishDate" jdbcType="DATE"/>
+        <result column="REVOKE_DATE" property="revokeDate" jdbcType="DATE"/>
+        <result column="REVOKE_REASON" property="revokeReason" jdbcType="VARCHAR"/>
+        
+    </resultMap>
+</mapper>

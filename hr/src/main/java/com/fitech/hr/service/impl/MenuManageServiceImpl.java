@@ -12,6 +12,7 @@ import java.util.List;
 
 @Service
 public class MenuManageServiceImpl implements MenuManageService {
+
     @Autowired
     private MenuManageDAO menuManageDAO;
 

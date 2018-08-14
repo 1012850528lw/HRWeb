@@ -47,6 +47,11 @@ public class MainConctroller {
         return "sys/main/password";
     }
 
+    @RequestMapping("/zzjgwh")
+    public String zzjgwh(){
+        return "sys/zzjggl/zzjgwh";
+    }
+
     @RequestMapping("/in")
     @ResponseBody
     public String index2(String aa) {

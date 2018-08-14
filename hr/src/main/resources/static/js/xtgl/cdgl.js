@@ -14,7 +14,6 @@ function treeInit() {
                     dataType: "json",
                     success: function (data) {
                         tableData = JSON.parse(JSON.stringify(data));
-                        console.log(tableData);
                         $("#menu_table").bootstrapTable("removeAll");
                         $("#menu_table").bootstrapTable('append',tableData);
                     }
