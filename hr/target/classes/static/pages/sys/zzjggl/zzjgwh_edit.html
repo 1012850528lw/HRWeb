@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../plugin/bootstrap-3.3.7/dist/css/bootstrap.css"
+          rel="stylesheet" type="text/css" />
+    <link href="../plugin/bootstrapValidator/bootstrapValidator.css"
+          rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../pages/layerui/layui/css/layui.css" media="all" />
+</head>
+<body>
+<div class="container" style="margin-top: 20px">
+    <form class="form-horizontal" id="form_organ_edit">
+        <div class="form-group">
+            <label class="col-sm-2 control-label">组织编号</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" th:field="${organ.organId}" id="organId" name="organId" placeholder="组织编号"/>
+            </div>
+            <label class="col-sm-2 control-label">上级组织编号</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" th:field="${organ.pareOrganId}" id="pareOrganId" name="pareOrganId" placeholder="上级组织编号"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">组织名称</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" th:field="${organ.organName}" id="organName" name="organName" placeholder="组织名称"/>
+            </div>
+            <label class="col-sm-2 control-label">组织类型代码</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" th:field="${organ.organTypeCode}" id="organTypeCode" name="organTypeCode" placeholder="组织类型代码"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">组织职能描述</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" th:field="${organ.organNote}" id="organNote" name="organNote" placeholder="组织职能描述"/>
+            </div>
+            <label class="col-sm-2 control-label">成立日期</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" th:field="${organ.establishDate}" id="establishDate" name="establishDate" placeholder="成立日期"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">撤销日期</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" th:field="${organ.revokeDate}" id="revokeDate" name="revokeDate" placeholder="撤销日期"/>
+            </div>
+            <label class="col-sm-2 control-label">撤销原因</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" th:field="${organ.revokeReason}" id="revokeReason" name="revokeReason" placeholder="撤销原因"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">负责人员工号</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" th:field="${organ.headEmployeeId}" id="headEmployeeId" name="headEmployeeId" placeholder="负责人员工号"/>
+            </div>
+            <label class="col-sm-2 control-label">统一社会信用代码</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" th:field="${organ.unSocialCreditCode}" id="unSocialCreditCode" name="unSocialCreditCode" placeholder="统一社会信用代码"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">地址</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" th:field="${organ.organAddress}" id="organAddress" name="organAddress" placeholder="地址"/>
+            </div>
+            <label class="col-sm-2 control-label">联系电话</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" th:field="${organ.contactNumber}" id="contactNumber" name="contactNumber" placeholder="联系电话"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">基本户账号</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" th:field="${organ.basicDepositAcct}" id="basicDepositAcct" name="basicDepositAcct" placeholder="基本户账号"/>
+            </div>
+            <label class="col-sm-2 control-label">基本户开户行名称</label>
+            <div class="col-sm-4">
+                <input class="form-control" type="text" th:field="${organ.basicDepositBank}" id="basicDepositBank" name="basicDepositBank" placeholder="基本户开户行名称"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">组织状态代码</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" th:field="${organ.organStatus}" id="organStatus" name="organStatus" placeholder="组织状态代码"/>
+            </div>
+            <label class="col-sm-2 control-label">创建员工号</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" th:field="${organ.createEmployeeId}" id="createEmployeeId" name="createEmployeeId" placeholder="创建员工号"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">修改员工号</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" th:field="${organ.mdyEmployeeId}" id="mdyEmployeeId" name="mdyEmployeeId" placeholder="修改员工号"/>
+            </div>
+            <label class="col-sm-2 control-label">创建时间</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" th:field="${organ.createTime}" id="createTime" name="createTime" placeholder="创建时间"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">修改时间</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" th:field="${organ.mdyTime}" id="mdyTime" name="mdyTime" placeholder="修改时间"/>
+            </div>
+            <label class="col-sm-2 control-label">邮编</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" th:field="${organ.post}" id="post" name="post" placeholder="邮编"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">传真</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" th:field="${organ.fax}" id="fax" name="fax" placeholder="传真"/>
+            </div>
+            <label class="col-sm-2 control-label">组织级别</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" th:field="${organ.organLevel}" id="organLevel" name="organLevel" placeholder="组织级别"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-10"></div>
+            <button type="submit" class="col-sm-1 btn-success">确定</button>
+            <button type="button" class="col-sm-1 btn-default" onclick="closeAddShow()">取消</button>
+        </div>
+    </form>
+</div>
+</body>
+<script src="../plugin/jquery/jquery-1.11.0.min.js"></script>
+<script src="../plugin/bootstrap-3.3.7/dist/js/bootstrap.js"></script>
+<script src="../plugin/bootstrapValidator/bootstrapValidator.js"></script>
+<script src="../pages/layerui/layui/layui.js"></script>
+<script src="../plugin/layer/layer.js"></script>
+<script src="../js/zzjggl/zzjgwh.js"></script>
+</html>
