@@ -8,6 +8,7 @@ import com.google.gson.JsonObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -34,8 +35,26 @@ public class OrganStructServiceImpl implements OrganStructService {
         return this.organStructDAO.selectByOrganId(organId);
     }
 
-//    @Override
-//    public int updateByOrganId(OrganStruct record) {
-//        return this.organStructDAO.updateByOrganId(record);
-//    }
+    @Override
+    public int updateByOrganId(OrganStruct record) {
+        return this.organStructDAO.updateByOrganId(record);
+    }
+
+    @Override
+    public int deleteByOrganId(String organId) {
+        return this.organStructDAO.deleteByOrganId(organId);
+    }
+
+    @Override
+    public int insertOrgan(OrganStruct record) {
+        return this.organStructDAO.insertOrgan(record);
+    }
+
+    @Override
+    public List<OrganStruct> selectTree(String organId) {
+        List<OrganStruct> list = new ArrayList<>();
+        list.add(this.organStructDAO.selectByOrganId(organId));
+        return list;
+    }
+
 }

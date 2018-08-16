@@ -5,7 +5,7 @@ function treeInit() {
             elem: '#menu_tree',
             nodes: getTreeData(),
             click: function(item){
-                var tableData = []
+                var tableData = [];
                 $.ajax({
                     type: "get",
                     url: "/menu/selectTree?menuId="+item.menuId,

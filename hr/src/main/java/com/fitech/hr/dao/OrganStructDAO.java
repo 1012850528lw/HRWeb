@@ -13,7 +13,11 @@ public interface OrganStructDAO {
 
     Long countByRecord(OrganStruct record);
 
-    //int updateByOrganId(OrganStruct record);
+    int updateByOrganId(OrganStruct record);
+
+    int deleteByOrganId(String organId);
+
+    int insertOrgan(OrganStruct record);
 
     OrganStruct selectByOrganId(String organId);
 

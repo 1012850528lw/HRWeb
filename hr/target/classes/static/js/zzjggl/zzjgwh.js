@@ -1,4 +1,135 @@
-function tableInit(url) {
+function tableInit(url,flag) {
+    var tableData = [
+        {
+            title: '操作',
+            align: 'center',
+            events: operateEvents,
+            formatter: operationFormatter
+        },
+        {
+            field: 'organId',
+            title: '组织编号',
+            align: 'center'
+        },
+        {
+            field: 'pareOrganId',
+            title: '上级组织编号',
+            align: 'center'
+        },
+        {
+            field: 'organName',
+            title: '组织名称',
+            align: 'center',
+            formatter: emptyWidth
+        },
+        {
+            field: 'organTypeCode',
+            title: '组织类型代码',
+            align: 'center'
+        },
+        {
+            field: 'organNote',
+            title: '组织职能描述',
+            align: 'center',
+            formatter:emptyWidth
+        },
+        {
+            field: 'establishDate',
+            title: '成立日期',
+            align: 'center',
+            formatter: emptyWidth
+        },
+        {
+            field: 'revokeDate',
+            title: '撤销日期',
+            align: 'center'
+        },
+        {
+            field: 'revokeReason',
+            title: '撤销原因',
+            align: 'center',
+            formatter: emptyWidth
+        },
+        {
+            field: 'headEmployeeId',
+            title: '负责人员工号',
+            align: 'center',
+            formatter: emptyWidth
+        },
+        {
+            field: 'unSocialCreditCode',
+            title: '统一社会信用代码',
+            align: 'center',
+            formatter: emptyWidth
+        },
+        {
+            field: 'organAddress',
+            title: '地址',
+            align: 'center',
+            formatter: emptyWidth
+        },
+        {
+            field: 'contactNumber',
+            title: '联系电话',
+            align: 'center',
+            formatter: emptyWidth
+        },
+        {
+            field: 'basicDepositAcct',
+            title: '基本户账号',
+            align: 'center',
+            formatter: emptyWidth
+        },
+        {
+            field: 'basicDepositBank',
+            title: '基本户开户行名称',
+            align: 'center',
+            formatter: emptyWidth
+        },
+        {
+            field: 'organStatus',
+            title: '组织状态代码',
+            align: 'center'
+        },
+        {
+            field: 'createEmployeeId',
+            title: '创建员工号',
+            align: 'center'
+        },
+        {
+            field: 'mdyEmployeeId',
+            title: '修改员工号',
+            align: 'center'
+        },
+        {
+            field: 'createTime',
+            title: '创建时间',
+            align: 'center'
+        },
+        {
+            field: 'mdyTime',
+            title: '修改时间',
+            align: 'center'
+        },
+        {
+            field: 'post',
+            title: '邮编',
+            align: 'center'
+        },
+        {
+            field: 'fax',
+            title: '传真',
+            align: 'center'
+        },
+        {
+            field: 'organLevel',
+            title: '组织级别',
+            align: 'center'
+        }
+    ];
+    if(flag === "zzjgcx"){
+        var data = tableData.shift();
+    }
     $("#organ_table").bootstrapTable({
         url: url,
         method: 'get',
@@ -18,143 +149,24 @@ function tableInit(url) {
         clickToSelect: true,
         smartDisplay: true,
         cardView: false,
-        columns: [
-            {
-                field: 'organId',
-                title: '组织编号',
-                align: 'center'
-            },
-            {
-                field: 'pareOrganId',
-                title: '上级组织编号',
-                align: 'center'
-            },
-            {
-                field: 'organName',
-                title: '组织名称',
-                align: 'center',
-                formatter: emptyWidth
-            },
-            {
-                field: 'organTypeCode',
-                title: '组织类型代码',
-                align: 'center'
-            },
-            {
-                field: 'organNote',
-                title: '组织职能描述',
-                align: 'center',
-                formatter:emptyWidth
-            },
-            {
-                field: 'establishDate',
-                title: '成立日期',
-                align: 'center',
-                formatter: emptyWidth
-            },
-            {
-                field: 'revokeDate',
-                title: '撤销日期',
-                align: 'center'
-            },
-            {
-                field: 'revokeReason',
-                title: '撤销原因',
-                align: 'center',
-                formatter: emptyWidth
-            },
-            {
-                field: 'headEmployeeId',
-                title: '负责人员工号',
-                align: 'center',
-                formatter: emptyWidth
-            },
-            {
-                field: 'unSocialCreditCode',
-                title: '统一社会信用代码',
-                align: 'center',
-                formatter: emptyWidth
-            },
-            {
-                field: 'organAddress',
-                title: '地址',
-                align: 'center',
-                formatter: emptyWidth
-            },
-            {
-                field: 'contactNumber',
-                title: '联系电话',
-                align: 'center',
-                formatter: emptyWidth
-            },
-            {
-                field: 'basicDepositAcct',
-                title: '基本户账号',
-                align: 'center',
-                formatter: emptyWidth
-            },
-            {
-                field: 'basicDepositBank',
-                title: '基本户开户行名称',
-                align: 'center',
-                formatter: emptyWidth
-            },
-            {
-                field: 'organStatus',
-                title: '组织状态代码',
-                align: 'center'
-            },
-            {
-                field: 'createEmployeeId',
-                title: '创建员工号',
-                align: 'center'
-            },
-            {
-                field: 'mdyEmployeeId',
-                title: '修改员工号',
-                align: 'center'
-            },
-            {
-                field: 'createTime',
-                title: '创建时间',
-                align: 'center'
-            },
-            {
-                field: 'mdyTime',
-                title: '修改时间',
-                align: 'center'
-            },
-            {
-                field: 'post',
-                title: '邮编',
-                align: 'center'
-            },
-            {
-                field: 'fax',
-                title: '传真',
-                align: 'center'
-            },
-            {
-                field: 'organLevel',
-                title: '组织级别',
-                align: 'center'
-            },
-            {
-                title: '操作',
-                align: 'center',
-                events: operateEvents,
-                formatter: operationFormatter
-            }
-        ]
+        columns: tableData
     });
 
     function queryParams(params) {
         var temp = {
             pageSize: params.limit,
-            pageNumber: params.offset
+            pageNumber: params.offset,
+            organId: $("#organId").val(),
+            pareOrganId: $("#pareOrganId").val(),
+            organName: $("#organName").val()
         };
         return temp;
     }
+}
+
+function searchOrgan() {
+    $("#organ_table").bootstrapTable('destroy');
+    tableInit("/organ/getList","zzjgcx");
 }
 
 function treeInit() {
@@ -162,9 +174,23 @@ function treeInit() {
     layui.use('tree', function () {
         layui.tree({
             elem: '#organ_tree',
-            nodes: getTreeData()
+            nodes: getTreeData(),
+            click: function (item) {
+                var tableData = [];
+                $.ajax({
+                    type: "get",
+                    url: "/organ/selectTree?organId="+item.organId,
+                    data: "",
+                    async: false,
+                    dataType: "json",
+                    success: function (data) {
+                        tableData = JSON.parse(JSON.stringify(data));
+                        $("#organ_table").bootstrapTable("removeAll");
+                        $("#organ_table").bootstrapTable('append',tableData);
+                    }
+                });
+            }
         });
-
     });
 }
 treeInit();
@@ -253,6 +279,28 @@ window.operateEvents = {
                 treeInit();
             }
         });
+    },
+    'click .deleteOperate': function (e, value, row) {
+        parent.layer.confirm("是否删除此条记录?",{
+            shade: false,
+            btn: ['确定', '取消']
+        }, function () {
+            $.ajax({
+                type: "get",
+                url: "/organ/deleteOrgan",
+                dataType: "text",
+                data: {"organId": row.organId},
+                error: function () {
+                    showInfo("系统错误");
+                },
+                success: function () {
+                    showInfo("删除成功");
+                    $("#organ_table").bootstrapTable('refresh');
+                    treeInit();
+                    closeAddShow();
+                }
+            });
+        })
     }
 };
 
@@ -317,5 +365,71 @@ function showInfo(str) {
         offset: 't',
         time: 1000,
         anim: 6
+    });
+}
+
+function addShow() {
+    parent.layer.open({
+        type: 2,
+        title: '增加组织',
+        shade: 0.1,
+        shadeClose: true,
+        maxmin: true,
+        area: ['70%', '60%'],
+        content: '/zzjgwh_add',
+        end: function () {
+            $("#organ_table").bootstrapTable('refresh');
+            treeInit();
+        }
+    });
+}
+
+$('#form_organ_add').bootstrapValidator({
+    message: 'This value is not valid',
+    excluded: ':disabled',
+    feedbackIcons: {
+        valid: 'glyphicon glyphicon-ok',
+        invalid: 'glyphicon glyphicon-remove',
+        validating: 'glyphicon glyphicon-refresh'
+    },
+    fields: {
+        organId: {
+            message: '编号不能为空',//默认提示信息
+            validators: {
+                notEmpty: {
+                    message: '编号必填不能为空'
+                }
+            }
+        }
+    }
+}).on(
+    'error.form.bv',
+    function (e) {
+        var $form = $(e.target), validator = $form
+            .data('bootstrapValidator'), $invalidField = validator
+            .getInvalidFields().eq(0), $collapse = $invalidField
+            .parents('.collapse');
+
+        $collapse.collapse('show');
+    }).on('success.form.bv', function (e) {
+    e.preventDefault();
+    insertOrgan();
+});
+
+
+function insertOrgan() {
+    $.ajax({
+        type: "get",
+        url: "/organ/insertOrgan",
+        async: false,
+        data: $("#form_organ_add").serialize(),
+        dataType: "text",
+        success: function () {
+            showInfo("菜单添加成功");
+            closeAddShow();
+        },
+        error: function () {
+            showInfo("系统错误");
+        }
     });
 }

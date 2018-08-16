@@ -40,9 +40,28 @@ public class OrganStructController {
         return modelAndView;
     }
 
-//    @ResponseBody
-//    @RequestMapping("updateOrgan")
-//    public int updateByOrganId(OrganStruct record){
-//        return this.organStructService.updateByOrganId(record);
-//    }
+
+    @ResponseBody
+    @RequestMapping("updateOrgan")
+    public int updateByOrganId(OrganStruct record){
+        return this.organStructService.updateByOrganId(record);
+    }
+
+    @ResponseBody
+    @RequestMapping("deleteOrgan")
+    public int deleteByOrganId(String organId){
+        return this.organStructService.deleteByOrganId(organId);
+    }
+
+    @ResponseBody
+    @RequestMapping("insertOrgan")
+    public int insertOrgan(OrganStruct record){
+        return this.organStructService.insertOrgan(record);
+    }
+
+    @ResponseBody
+    @RequestMapping("selectTree")
+    public List<OrganStruct> selectTree(String organId){
+        return this.organStructService.selectTree(organId);
+    }
 }

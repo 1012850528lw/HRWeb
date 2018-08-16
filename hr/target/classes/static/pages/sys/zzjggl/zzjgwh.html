@@ -10,11 +10,14 @@
     <link rel="stylesheet" href="../pages/layerui/layui/css/layui.css" media="all" />
 </head>
 <body>
-    <div class="layui-row">
+    <div class="layui-row" style="margin-right: 5px">
         <div class="layui-col-md2">
-            <ul id="organ_tree" style="margin-top: 20px;margin-left: 20px;"></ul>
+            <ul id="organ_tree" style="margin-top: 20px;"></ul>
         </div>
         <div class="layui-col-md10">
+            <div class="col-sm-2">
+                <input type="button" class="btn btn-danger form-control" value="增加" onclick="addShow()" style="margin-top: 10px"/>
+            </div>
             <table id="organ_table" data-toggle="table" style="word-break:break-all;"></table>
         </div>
     </div>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8a8352d5-b52f-4ccb-86eb-ecb19133f62c" name="Default" comment="" />
+    <list default="true" readonly="true" id="8a8352d5-b52f-4ccb-86eb-ecb19133f62c" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -11,107 +11,215 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="zzjgwh.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/zzjggl/zzjgwh.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="891">
-              <caret line="320" column="1" lean-forward="false" selection-start-line="320" selection-start-column="1" selection-end-line="320" selection-end-column="1" />
+            <state relative-caret-position="-2349">
+              <caret line="313" column="6" lean-forward="true" selection-start-line="313" selection-start-column="6" selection-end-line="313" selection-end-column="6" />
               <folding>
-                <element signature="e#563#4018#0" expanded="false" />
-                <marker date="1534325645562" expanded="true" signature="6268:6280" ph="..." />
-                <marker date="1534325645562" expanded="true" signature="6428:6440" ph="..." />
-                <marker date="1534325645562" expanded="true" signature="6498:6600" ph="..." />
-                <marker date="1534325645562" expanded="true" signature="6658:6760" ph="..." />
+                <element signature="e#51#2998#0" expanded="false" />
+                <marker date="1534401972068" expanded="true" signature="6747:6759" ph="..." />
+                <marker date="1534401972068" expanded="true" signature="6907:6919" ph="..." />
+                <marker date="1534401972068" expanded="true" signature="6977:7079" ph="..." />
+                <marker date="1534401972068" expanded="true" signature="7137:7239" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrganStructController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/fitech/hr/controller/OrganStructController.java">
+      <file leaf-file-name="Employee.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fitech/hr/dao/Employee.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="40" column="5" lean-forward="true" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrganStructService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/fitech/hr/service/OrganStructService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrganStructServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/fitech/hr/service/impl/OrganStructServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="36" column="15" lean-forward="true" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrganStructDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/fitech/hr/dao/OrganStructDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrganStructMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/fitech/hr/mapping/OrganStructMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1215">
-              <caret line="99" column="9" lean-forward="true" selection-start-line="99" selection-start-column="9" selection-end-line="99" selection-end-column="9" />
+            <state relative-caret-position="216">
+              <caret line="164" column="5" lean-forward="true" selection-start-line="164" selection-start-column="5" selection-end-line="164" selection-end-column="5" />
               <folding>
-                <marker date="1534326174533" expanded="true" signature="3029:3101" ph="select * fro... hr_organ_struct" />
-                <marker date="1534326174533" expanded="true" signature="3233:3248" ph="select count... " />
-                <marker date="1534326174533" expanded="true" signature="3233:3256" ph="select count... hr" />
-                <marker date="1534326174533" expanded="true" signature="3233:3269" ph="select count... hr_organ_struct" />
-                <marker date="1534326174533" expanded="true" signature="3356:3428" ph="select from hr_organ_struct" />
-                <marker date="1534326174533" expanded="true" signature="3356:3550" ph="select from hr_organ_struct" />
-                <marker date="1534326174533" expanded="true" signature="3671:3796" ph="select from hr_organ_struct" />
-                <marker date="1534326174533" expanded="true" signature="3913:4465" ph="update hr_organ_struct... " />
-                <marker date="1534326174533" expanded="true" signature="3913:4565" ph="update hr_organ_struct... " />
-                <marker date="1534326174533" expanded="true" signature="3913:5353" ph="update hr_organ_struct... " />
+                <element signature="e#1927#1928#0" expanded="true" />
+                <element signature="e#1960#1961#0" expanded="true" />
+                <element signature="e#2012#2013#0" expanded="true" />
+                <element signature="e#2056#2057#0" expanded="true" />
+                <element signature="e#2090#2091#0" expanded="true" />
+                <element signature="e#2120#2121#0" expanded="true" />
+                <element signature="e#2166#2167#0" expanded="true" />
+                <element signature="e#2204#2205#0" expanded="true" />
+                <element signature="e#2243#2244#0" expanded="true" />
+                <element signature="e#2278#2279#0" expanded="true" />
+                <element signature="e#2334#2335#0" expanded="true" />
+                <element signature="e#2382#2383#0" expanded="true" />
+                <element signature="e#2417#2418#0" expanded="true" />
+                <element signature="e#2448#2449#0" expanded="true" />
+                <element signature="e#2496#2497#0" expanded="true" />
+                <element signature="e#2536#2537#0" expanded="true" />
+                <element signature="e#2574#2575#0" expanded="true" />
+                <element signature="e#2608#2609#0" expanded="true" />
+                <element signature="e#2662#2663#0" expanded="true" />
+                <element signature="e#2708#2709#0" expanded="true" />
+                <element signature="e#2742#2743#0" expanded="true" />
+                <element signature="e#2774#2775#0" expanded="true" />
+                <element signature="e#2822#2823#0" expanded="true" />
+                <element signature="e#2864#2865#0" expanded="true" />
+                <element signature="e#2891#2892#0" expanded="true" />
+                <element signature="e#2917#2918#0" expanded="true" />
+                <element signature="e#2952#2953#0" expanded="true" />
+                <element signature="e#2982#2983#0" expanded="true" />
+                <element signature="e#3016#3017#0" expanded="true" />
+                <element signature="e#3046#3047#0" expanded="true" />
+                <element signature="e#3092#3093#0" expanded="true" />
+                <element signature="e#3130#3131#0" expanded="true" />
+                <element signature="e#3163#3164#0" expanded="true" />
+                <element signature="e#3192#3193#0" expanded="true" />
+                <element signature="e#3236#3237#0" expanded="true" />
+                <element signature="e#3272#3273#0" expanded="true" />
+                <element signature="e#3312#3313#0" expanded="true" />
+                <element signature="e#3348#3349#0" expanded="true" />
+                <element signature="e#3406#3407#0" expanded="true" />
+                <element signature="e#3456#3457#0" expanded="true" />
+                <element signature="e#3493#3494#0" expanded="true" />
+                <element signature="e#3526#3527#0" expanded="true" />
+                <element signature="e#3578#3579#0" expanded="true" />
+                <element signature="e#3622#3623#0" expanded="true" />
+                <element signature="e#3661#3662#0" expanded="true" />
+                <element signature="e#3696#3697#0" expanded="true" />
+                <element signature="e#3752#3753#0" expanded="true" />
+                <element signature="e#3800#3801#0" expanded="true" />
+                <element signature="e#3844#3845#0" expanded="true" />
+                <element signature="e#3884#3885#0" expanded="true" />
+                <element signature="e#3950#3951#0" expanded="true" />
+                <element signature="e#4008#4009#0" expanded="true" />
+                <element signature="e#4051#4052#0" expanded="true" />
+                <element signature="e#4090#4091#0" expanded="true" />
+                <element signature="e#4154#4155#0" expanded="true" />
+                <element signature="e#4210#4211#0" expanded="true" />
+                <element signature="e#4243#4244#0" expanded="true" />
+                <element signature="e#4274#4275#0" expanded="true" />
+                <element signature="e#4320#4321#0" expanded="true" />
+                <element signature="e#4360#4361#0" expanded="true" />
+                <element signature="e#4401#4402#0" expanded="true" />
+                <element signature="e#4438#4439#0" expanded="true" />
+                <element signature="e#4498#4499#0" expanded="true" />
+                <element signature="e#4550#4551#0" expanded="true" />
+                <element signature="e#4592#4593#0" expanded="true" />
+                <element signature="e#4630#4631#0" expanded="true" />
+                <element signature="e#4692#4693#0" expanded="true" />
+                <element signature="e#4746#4747#0" expanded="true" />
+                <element signature="e#4791#4792#0" expanded="true" />
+                <element signature="e#4832#4833#0" expanded="true" />
+                <element signature="e#4900#4901#0" expanded="true" />
+                <element signature="e#4960#4961#0" expanded="true" />
+                <element signature="e#4997#4998#0" expanded="true" />
+                <element signature="e#5032#5033#0" expanded="true" />
+                <element signature="e#5086#5087#0" expanded="true" />
+                <element signature="e#5134#5135#0" expanded="true" />
+                <element signature="e#5165#5166#0" expanded="true" />
+                <element signature="e#5195#5196#0" expanded="true" />
+                <element signature="e#5238#5239#0" expanded="true" />
+                <element signature="e#5276#5277#0" expanded="true" />
+                <element signature="e#5313#5314#0" expanded="true" />
+                <element signature="e#5348#5349#0" expanded="true" />
+                <element signature="e#5402#5403#0" expanded="true" />
+                <element signature="e#5450#5451#0" expanded="true" />
+                <element signature="e#5481#5482#0" expanded="true" />
+                <element signature="e#5511#5512#0" expanded="true" />
+                <element signature="e#5554#5555#0" expanded="true" />
+                <element signature="e#5592#5593#0" expanded="true" />
+                <element signature="e#5635#5636#0" expanded="true" />
+                <element signature="e#5674#5675#0" expanded="true" />
+                <element signature="e#5738#5739#0" expanded="true" />
+                <element signature="e#5794#5795#0" expanded="true" />
+                <element signature="e#5836#5837#0" expanded="true" />
+                <element signature="e#5876#5877#0" expanded="true" />
+                <element signature="e#5940#5941#0" expanded="true" />
+                <element signature="e#5998#5999#0" expanded="true" />
+                <element signature="e#6038#6039#0" expanded="true" />
+                <element signature="e#6076#6077#0" expanded="true" />
+                <element signature="e#6136#6137#0" expanded="true" />
+                <element signature="e#6190#6191#0" expanded="true" />
+                <element signature="e#6229#6230#0" expanded="true" />
+                <element signature="e#6264#6265#0" expanded="true" />
+                <element signature="e#6320#6321#0" expanded="true" />
+                <element signature="e#6368#6369#0" expanded="true" />
+                <element signature="e#6404#6405#0" expanded="true" />
+                <element signature="e#6436#6437#0" expanded="true" />
+                <element signature="e#6486#6487#0" expanded="true" />
+                <element signature="e#6528#6529#0" expanded="true" />
+                <element signature="e#6570#6571#0" expanded="true" />
+                <element signature="e#6608#6609#0" expanded="true" />
+                <element signature="e#6670#6671#0" expanded="true" />
+                <element signature="e#6724#6725#0" expanded="true" />
+                <element signature="e#6769#6770#0" expanded="true" />
+                <element signature="e#6810#6811#0" expanded="true" />
+                <element signature="e#6878#6879#0" expanded="true" />
+                <element signature="e#6938#6939#0" expanded="true" />
+                <element signature="e#6979#6980#0" expanded="true" />
+                <element signature="e#7016#7017#0" expanded="true" />
+                <element signature="e#7076#7077#0" expanded="true" />
+                <element signature="e#7128#7129#0" expanded="true" />
+                <element signature="e#7172#7173#0" expanded="true" />
+                <element signature="e#7212#7213#0" expanded="true" />
+                <element signature="e#7278#7279#0" expanded="true" />
+                <element signature="e#7336#7337#0" expanded="true" />
+                <element signature="e#7381#7382#0" expanded="true" />
+                <element signature="e#7422#7423#0" expanded="true" />
+                <element signature="e#7490#7491#0" expanded="true" />
+                <element signature="e#7550#7551#0" expanded="true" />
+                <element signature="e#7591#7592#0" expanded="true" />
+                <element signature="e#7628#7629#0" expanded="true" />
+                <element signature="e#7688#7689#0" expanded="true" />
+                <element signature="e#7740#7741#0" expanded="true" />
+                <element signature="e#7775#7776#0" expanded="true" />
+                <element signature="e#7808#7809#0" expanded="true" />
+                <element signature="e#7858#7859#0" expanded="true" />
+                <element signature="e#7902#7903#0" expanded="true" />
+                <element signature="e#7937#7938#0" expanded="true" />
+                <element signature="e#7970#7971#0" expanded="true" />
+                <element signature="e#8020#8021#0" expanded="true" />
+                <element signature="e#8064#8065#0" expanded="true" />
+                <element signature="e#8098#8099#0" expanded="true" />
+                <element signature="e#8130#8131#0" expanded="true" />
+                <element signature="e#8178#8179#0" expanded="true" />
+                <element signature="e#8220#8221#0" expanded="true" />
+                <element signature="e#8258#8259#0" expanded="true" />
+                <element signature="e#8292#8293#0" expanded="true" />
+                <element signature="e#8346#8347#0" expanded="true" />
+                <element signature="e#8392#8393#0" expanded="true" />
+                <element signature="e#8428#8429#0" expanded="true" />
+                <element signature="e#8460#8461#0" expanded="true" />
+                <element signature="e#8510#8511#0" expanded="true" />
+                <element signature="e#8552#8553#0" expanded="true" />
+                <element signature="e#8590#8591#0" expanded="true" />
+                <element signature="e#8624#8625#0" expanded="true" />
+                <element signature="e#8678#8679#0" expanded="true" />
+                <element signature="e#8724#8725#0" expanded="true" />
+                <element signature="e#8757#8758#0" expanded="true" />
+                <element signature="e#8786#8787#0" expanded="true" />
+                <element signature="e#8830#8831#0" expanded="true" />
+                <element signature="e#8866#8867#0" expanded="true" />
+                <element signature="e#8909#8910#0" expanded="true" />
+                <element signature="e#8948#8949#0" expanded="true" />
+                <element signature="e#9012#9013#0" expanded="true" />
+                <element signature="e#9068#9069#0" expanded="true" />
+                <element signature="e#9103#9104#0" expanded="true" />
+                <element signature="e#9136#9137#0" expanded="true" />
+                <element signature="e#9186#9187#0" expanded="true" />
+                <element signature="e#9230#9231#0" expanded="true" />
+                <element signature="e#9270#9271#0" expanded="true" />
+                <element signature="e#9306#9307#0" expanded="true" />
+                <element signature="e#9364#9365#0" expanded="true" />
+                <element signature="e#9414#9415#0" expanded="true" />
+                <element signature="e#9446#9447#0" expanded="true" />
+                <element signature="e#9476#9477#0" expanded="true" />
+                <element signature="e#9520#9521#0" expanded="true" />
+                <element signature="e#9558#9559#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MenuManageMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/fitech/hr/mapping/MenuManageMapper.xml">
+      <file leaf-file-name="zzjgwh.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/pages/sys/zzjggl/zzjgwh.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-810">
-              <caret line="39" column="10" lean-forward="true" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="10" />
-              <folding>
-                <marker date="1534293299024" expanded="true" signature="2563:2595" ph="select count... hr_sys_menu" />
-                <marker date="1534293299024" expanded="true" signature="2732:2895" ph="select from hr_sys_menu" />
-                <marker date="1534293299024" expanded="true" signature="2995:3280" ph="insert into hr_sys_menu... " />
-                <marker date="1534293299024" expanded="true" signature="3384:3820" ph="update hr_sys_menu... " />
-                <marker date="1534293299024" expanded="true" signature="3936:4111" ph="select MENU_... hr_sys_menu" />
-                <marker date="1534293299024" expanded="true" signature="4201:4275" ph="delete from hr_sys_menu... " />
-                <marker date="1534293299024" expanded="true" signature="4357:4421" ph="select MENU_... hr_sys_menu" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="zzjgwh_edit.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/pages/sys/zzjggl/zzjgwh_edit.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="127" column="88" lean-forward="false" selection-start-line="127" selection-start-column="88" selection-end-line="127" selection-end-column="88" />
+            <state relative-caret-position="180">
+              <caret line="12" column="53" lean-forward="false" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -119,15 +227,68 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="zzjgcx.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/pages/sys/zzjggl/zzjgcx.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-351">
+              <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#form#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#form#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrganStructController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fitech/hr/controller/OrganStructController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1138">
+              <caret line="62" column="33" lean-forward="false" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
+              <folding>
+                <element signature="e#1505#1506#0" expanded="true" />
+                <element signature="e#1575#1576#0" expanded="true" />
+                <element signature="e#1677#1678#0" expanded="true" />
+                <element signature="e#1748#1749#0" expanded="true" />
+                <element signature="e#1850#1851#0" expanded="true" />
+                <element signature="e#1916#1917#0" expanded="true" />
+                <element signature="e#2026#2027#0" expanded="true" />
+                <element signature="e#2092#2093#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrganStructDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fitech/hr/dao/OrganStructDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="19" column="40" lean-forward="false" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="cdgl.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/xtgl/cdgl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="453">
-              <caret line="271" column="6" lean-forward="true" selection-start-line="271" selection-start-column="6" selection-end-line="271" selection-end-column="6" />
+            <state relative-caret-position="540">
+              <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
               <folding>
-                <marker date="1534293299031" expanded="true" signature="4957:5059" ph="..." />
-                <marker date="1534293299031" expanded="true" signature="5117:5219" ph="..." />
+                <marker date="1534400874506" expanded="true" signature="4958:5060" ph="..." />
+                <marker date="1534400874506" expanded="true" signature="5118:5220" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrganStructService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fitech/hr/service/OrganStructService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="486">
+              <caret line="21" column="49" lean-forward="false" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -138,12 +299,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>showInfo</find>
+      <find>addshow</find>
     </findStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -155,16 +318,21 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/pages/sys/zzjggl/zzjgwh.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fitech/hr/controller/MainConctroller.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/pages/sys/zzjggl/zzjgwh_add.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/zzjggl/zzjgwh.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/pages/sys/zzjggl/zzjgwh_edit.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/pages/sys/zzjggl/zzjgwh_add.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/fitech/hr/dao/OrganStructDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fitech/hr/service/impl/OrganStructServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fitech/hr/service/OrganStructService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/pages/sys/xtgl/cdgl.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/pages/layerui/index.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fitech/hr/controller/MainConctroller.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fitech/hr/mapping/OrganStructMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/xtgl/cdgl.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fitech/hr/service/OrganStructService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fitech/hr/service/impl/OrganStructServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fitech/hr/controller/OrganStructController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/zzjggl/zzjgwh.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/pages/sys/zzjggl/zzjgwh.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/pages/sys/zzjggl/zzjgcx.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fitech/hr/dao/Employee.java" />
       </list>
     </option>
   </component>
@@ -214,9 +382,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="Scratches" />
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -366,6 +533,16 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="layerui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hr" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="sys" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -394,7 +571,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -526,6 +704,7 @@
   </component>
   <component name="SvnConfiguration" cleanupOnStartRun="true">
     <configuration>C:\Users\Administrator\AppData\Roaming\Subversion</configuration>
+    <supportedVersion>125</supportedVersion>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -535,46 +714,48 @@
       <option name="presentableId" value="Default" />
       <updated>1534293372187</updated>
       <workItem from="1534293376897" duration="26947000" />
+      <workItem from="1534379886291" duration="21447000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26947000" />
+    <option name="totallyTimeSpent" value="48394000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.681458" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6332237" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2579425" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -588,6 +769,122 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/zzjggl/zzjgwh.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5211">
+          <caret line="320" column="1" lean-forward="false" selection-start-line="320" selection-start-column="1" selection-end-line="320" selection-end-column="1" />
+          <folding>
+            <element signature="e#51#2998#0" expanded="false" />
+            <marker date="1534401972068" expanded="true" signature="6747:6759" ph="..." />
+            <marker date="1534401972068" expanded="true" signature="6907:6919" ph="..." />
+            <marker date="1534401972068" expanded="true" signature="6977:7079" ph="..." />
+            <marker date="1534401972068" expanded="true" signature="7137:7239" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fitech/hr/service/OrganStructService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fitech/hr/service/impl/OrganStructServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="972">
+          <caret line="36" column="15" lean-forward="true" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="15" />
+          <folding>
+            <element signature="e#1199#1200#0" expanded="false" />
+            <element signature="e#1265#1266#0" expanded="false" />
+            <element signature="e#1329#1330#0" expanded="false" />
+            <element signature="e#1396#1397#0" expanded="false" />
+            <element signature="e#1460#1461#0" expanded="false" />
+            <element signature="e#1522#1523#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fitech/hr/dao/OrganStructDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fitech/hr/mapping/OrganStructMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2673">
+          <caret line="99" column="9" lean-forward="true" selection-start-line="99" selection-start-column="9" selection-end-line="99" selection-end-column="9" />
+          <folding>
+            <marker date="1534399832709" expanded="true" signature="3063:3135" ph="select * fro... hr_organ_struct" />
+            <marker date="1534399832709" expanded="true" signature="3267:3282" ph="select count... " />
+            <marker date="1534399832709" expanded="true" signature="3267:3290" ph="select count... hr" />
+            <marker date="1534399832709" expanded="true" signature="3267:3303" ph="select count... hr_organ_struct" />
+            <marker date="1534399832709" expanded="true" signature="3390:3462" ph="select from hr_organ_struct" />
+            <marker date="1534399832709" expanded="true" signature="3390:3584" ph="select from hr_organ_struct" />
+            <marker date="1534399832709" expanded="true" signature="3705:3830" ph="select from hr_organ_struct" />
+            <marker date="1534399832709" expanded="true" signature="3936:4421" ph="update hr_organ_struct... " />
+            <marker date="1534399832709" expanded="true" signature="3936:4507" ph="update hr_organ_struct... " />
+            <marker date="1534399832709" expanded="true" signature="3936:5211" ph="update hr_organ_struct... " />
+            <marker date="1534399832709" expanded="true" signature="5302:5382" ph="delete from hr_organ_struct... " />
+            <marker date="1534399832709" expanded="true" signature="5484:6279" ph="insert into hr_organ_struct... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fitech/hr/mapping/MenuManageMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1053">
+          <caret line="39" column="10" lean-forward="true" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="10" />
+          <folding>
+            <marker date="1534293299024" expanded="true" signature="2563:2595" ph="select count... hr_sys_menu" />
+            <marker date="1534293299024" expanded="true" signature="2732:2895" ph="select from hr_sys_menu" />
+            <marker date="1534293299024" expanded="true" signature="2995:3280" ph="insert into hr_sys_menu... " />
+            <marker date="1534293299024" expanded="true" signature="3384:3820" ph="update hr_sys_menu... " />
+            <marker date="1534293299024" expanded="true" signature="3936:4111" ph="select MENU_... hr_sys_menu" />
+            <marker date="1534293299024" expanded="true" signature="4201:4275" ph="delete from hr_sys_menu... " />
+            <marker date="1534293299024" expanded="true" signature="4357:4421" ph="select MENU_... hr_sys_menu" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/pages/sys/zzjggl/zzjgwh_edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3429">
+          <caret line="127" column="88" lean-forward="false" selection-start-line="127" selection-start-column="88" selection-end-line="127" selection-end-column="88" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/xtgl/cdgl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7317">
+          <caret line="271" column="6" lean-forward="true" selection-start-line="271" selection-start-column="6" selection-end-line="271" selection-end-column="6" />
+          <folding>
+            <marker date="1534400874506" expanded="true" signature="4958:5060" ph="..." />
+            <marker date="1534400874506" expanded="true" signature="5118:5220" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fitech/hr/controller/OrganStructController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="40" column="5" lean-forward="true" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+          <folding>
+            <element signature="e#1505#1506#0" expanded="true" />
+            <element signature="e#1575#1576#0" expanded="true" />
+            <element signature="e#1677#1678#0" expanded="true" />
+            <element signature="e#1748#1749#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
@@ -612,30 +909,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fitech/hr/service/MenuManageService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/pages/sys/zzjggl/zzjgwh.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-          <folding>
-            <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/pages/sys/xtgl/cdgl_edit.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-81">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -643,30 +920,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="66" column="18" lean-forward="true" selection-start-line="66" selection-start-column="18" selection-end-line="66" selection-end-column="18" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fitech/hr/controller/MainConctroller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="972">
-          <caret line="56" column="33" lean-forward="false" selection-start-line="56" selection-start-column="33" selection-end-line="56" selection-end-column="33" />
-          <folding>
-            <element signature="e#1215#1216#0" expanded="false" />
-            <element signature="e#1261#1262#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/pages/sys/zzjggl/zzjgwh_add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="123" column="18" lean-forward="true" selection-start-line="123" selection-start-column="18" selection-end-line="123" selection-end-column="18" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -674,23 +927,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fitech/hr/dao/MenuManageDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="14" column="42" lean-forward="true" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fitech/hr/service/impl/MenuManageServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="31" column="20" lean-forward="true" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -702,53 +938,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fitech/hr/controller/MenuManageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-54">
-          <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/xtgl/cdgl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="271" column="6" lean-forward="true" selection-start-line="271" selection-start-column="6" selection-end-line="271" selection-end-column="6" />
-          <folding>
-            <marker date="1534293299031" expanded="true" signature="4957:5059" ph="..." />
-            <marker date="1534293299031" expanded="true" signature="5117:5219" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/pages/sys/zzjggl/zzjgwh_edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="127" column="88" lean-forward="false" selection-start-line="127" selection-start-column="88" selection-end-line="127" selection-end-column="88" />
+        <state relative-caret-position="405">
+          <caret line="138" column="7" lean-forward="true" selection-start-line="138" selection-start-column="7" selection-end-line="138" selection-end-column="7" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/zzjggl/zzjgwh.js">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/pages/sys/zzjggl/zzjgwh_add.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="891">
-          <caret line="320" column="1" lean-forward="false" selection-start-line="320" selection-start-column="1" selection-end-line="320" selection-end-column="1" />
-          <folding>
-            <element signature="e#563#4018#0" expanded="false" />
-            <marker date="1534325645562" expanded="true" signature="6268:6280" ph="..." />
-            <marker date="1534325645562" expanded="true" signature="6428:6440" ph="..." />
-            <marker date="1534325645562" expanded="true" signature="6498:6600" ph="..." />
-            <marker date="1534325645562" expanded="true" signature="6658:6760" ph="..." />
-          </folding>
+        <state relative-caret-position="1134">
+          <caret line="137" column="46" lean-forward="false" selection-start-line="137" selection-start-column="46" selection-end-line="137" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fitech/hr/mapping/MenuManageMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-810">
-          <caret line="39" column="10" lean-forward="true" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="10" />
+        <state relative-caret-position="-621">
+          <caret line="39" column="10" lean-forward="false" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="10" />
           <folding>
             <marker date="1534293299024" expanded="true" signature="2563:2595" ph="select count... hr_sys_menu" />
             <marker date="1534293299024" expanded="true" signature="2732:2895" ph="select from hr_sys_menu" />
@@ -761,54 +972,370 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fitech/hr/dao/OrganStructDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fitech/hr/controller/MainConctroller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
-          <folding />
+        <state relative-caret-position="420">
+          <caret line="60" column="27" lean-forward="true" selection-start-line="60" selection-start-column="27" selection-end-line="60" selection-end-column="27" />
+          <folding>
+            <element signature="e#1363#1364#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fitech/hr/service/impl/OrganStructServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="36" column="15" lean-forward="true" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fitech/hr/service/OrganStructService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/pages/layerui/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
-          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <caret line="103" column="53" lean-forward="false" selection-start-line="103" selection-start-column="53" selection-end-line="103" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fitech/hr/mapping/OrganStructMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1215">
-          <caret line="99" column="9" lean-forward="true" selection-start-line="99" selection-start-column="9" selection-end-line="99" selection-end-column="9" />
+        <state relative-caret-position="-594">
+          <caret line="38" column="13" lean-forward="true" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
           <folding>
-            <marker date="1534326174533" expanded="true" signature="3029:3101" ph="select * fro... hr_organ_struct" />
-            <marker date="1534326174533" expanded="true" signature="3233:3248" ph="select count... " />
-            <marker date="1534326174533" expanded="true" signature="3233:3256" ph="select count... hr" />
-            <marker date="1534326174533" expanded="true" signature="3233:3269" ph="select count... hr_organ_struct" />
-            <marker date="1534326174533" expanded="true" signature="3356:3428" ph="select from hr_organ_struct" />
-            <marker date="1534326174533" expanded="true" signature="3356:3550" ph="select from hr_organ_struct" />
-            <marker date="1534326174533" expanded="true" signature="3671:3796" ph="select from hr_organ_struct" />
-            <marker date="1534326174533" expanded="true" signature="3913:4465" ph="update hr_organ_struct... " />
-            <marker date="1534326174533" expanded="true" signature="3913:4565" ph="update hr_organ_struct... " />
-            <marker date="1534326174533" expanded="true" signature="3913:5353" ph="update hr_organ_struct... " />
+            <marker date="1534399832709" expanded="true" signature="3063:3135" ph="select * fro... hr_organ_struct" />
+            <marker date="1534399832709" expanded="true" signature="3267:3282" ph="select count... " />
+            <marker date="1534399832709" expanded="true" signature="3267:3290" ph="select count... hr" />
+            <marker date="1534399832709" expanded="true" signature="3267:3303" ph="select count... hr_organ_struct" />
+            <marker date="1534399832709" expanded="true" signature="3390:3462" ph="select from hr_organ_struct" />
+            <marker date="1534399832709" expanded="true" signature="3390:3584" ph="select from hr_organ_struct" />
+            <marker date="1534399832709" expanded="true" signature="3705:3830" ph="select from hr_organ_struct" />
+            <marker date="1534399832709" expanded="true" signature="3936:4421" ph="update hr_organ_struct... " />
+            <marker date="1534399832709" expanded="true" signature="3936:4507" ph="update hr_organ_struct... " />
+            <marker date="1534399832709" expanded="true" signature="3936:5211" ph="update hr_organ_struct... " />
+            <marker date="1534399832709" expanded="true" signature="5302:5382" ph="delete from hr_organ_struct... " />
+            <marker date="1534399832709" expanded="true" signature="5484:6279" ph="insert into hr_organ_struct... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/pages/sys/xtgl/cdgl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-351">
+          <caret line="14" column="30" lean-forward="false" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fitech/hr/controller/MenuManageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fitech/hr/dao/MenuManageDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="16" column="45" lean-forward="true" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fitech/hr/service/impl/MenuManageServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="31" column="20" lean-forward="true" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fitech/hr/service/MenuManageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fitech/hr/service/impl/OrganStructServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="56" column="20" lean-forward="false" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
+          <folding>
+            <element signature="e#1199#1200#0" expanded="false" />
+            <element signature="e#1265#1266#0" expanded="false" />
+            <element signature="e#1329#1330#0" expanded="false" />
+            <element signature="e#1396#1397#0" expanded="false" />
+            <element signature="e#1460#1461#0" expanded="false" />
+            <element signature="e#1522#1523#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fitech/hr/service/OrganStructService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="21" column="49" lean-forward="false" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/pages/sys/zzjggl/zzjgwh.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="53" lean-forward="false" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/pages/sys/zzjggl/zzjgcx.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-351">
+          <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#form#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fitech/hr/controller/RoleManageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fitech/hr/controller/OrganStructController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="40" column="5" lean-forward="true" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+        <state relative-caret-position="1138">
+          <caret line="62" column="33" lean-forward="false" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
+          <folding>
+            <element signature="e#1505#1506#0" expanded="true" />
+            <element signature="e#1575#1576#0" expanded="true" />
+            <element signature="e#1677#1678#0" expanded="true" />
+            <element signature="e#1748#1749#0" expanded="true" />
+            <element signature="e#1850#1851#0" expanded="true" />
+            <element signature="e#1916#1917#0" expanded="true" />
+            <element signature="e#2026#2027#0" expanded="true" />
+            <element signature="e#2092#2093#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fitech/hr/dao/OrganStructDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="19" column="40" lean-forward="false" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/xtgl/cdgl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding>
+            <marker date="1534400874506" expanded="true" signature="4958:5060" ph="..." />
+            <marker date="1534400874506" expanded="true" signature="5118:5220" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/zzjggl/zzjgwh.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2349">
+          <caret line="313" column="6" lean-forward="true" selection-start-line="313" selection-start-column="6" selection-end-line="313" selection-end-column="6" />
+          <folding>
+            <element signature="e#51#2998#0" expanded="false" />
+            <marker date="1534401972068" expanded="true" signature="6747:6759" ph="..." />
+            <marker date="1534401972068" expanded="true" signature="6907:6919" ph="..." />
+            <marker date="1534401972068" expanded="true" signature="6977:7079" ph="..." />
+            <marker date="1534401972068" expanded="true" signature="7137:7239" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fitech/hr/dao/Employee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="164" column="5" lean-forward="true" selection-start-line="164" selection-start-column="5" selection-end-line="164" selection-end-column="5" />
+          <folding>
+            <element signature="e#1927#1928#0" expanded="true" />
+            <element signature="e#1960#1961#0" expanded="true" />
+            <element signature="e#2012#2013#0" expanded="true" />
+            <element signature="e#2056#2057#0" expanded="true" />
+            <element signature="e#2090#2091#0" expanded="true" />
+            <element signature="e#2120#2121#0" expanded="true" />
+            <element signature="e#2166#2167#0" expanded="true" />
+            <element signature="e#2204#2205#0" expanded="true" />
+            <element signature="e#2243#2244#0" expanded="true" />
+            <element signature="e#2278#2279#0" expanded="true" />
+            <element signature="e#2334#2335#0" expanded="true" />
+            <element signature="e#2382#2383#0" expanded="true" />
+            <element signature="e#2417#2418#0" expanded="true" />
+            <element signature="e#2448#2449#0" expanded="true" />
+            <element signature="e#2496#2497#0" expanded="true" />
+            <element signature="e#2536#2537#0" expanded="true" />
+            <element signature="e#2574#2575#0" expanded="true" />
+            <element signature="e#2608#2609#0" expanded="true" />
+            <element signature="e#2662#2663#0" expanded="true" />
+            <element signature="e#2708#2709#0" expanded="true" />
+            <element signature="e#2742#2743#0" expanded="true" />
+            <element signature="e#2774#2775#0" expanded="true" />
+            <element signature="e#2822#2823#0" expanded="true" />
+            <element signature="e#2864#2865#0" expanded="true" />
+            <element signature="e#2891#2892#0" expanded="true" />
+            <element signature="e#2917#2918#0" expanded="true" />
+            <element signature="e#2952#2953#0" expanded="true" />
+            <element signature="e#2982#2983#0" expanded="true" />
+            <element signature="e#3016#3017#0" expanded="true" />
+            <element signature="e#3046#3047#0" expanded="true" />
+            <element signature="e#3092#3093#0" expanded="true" />
+            <element signature="e#3130#3131#0" expanded="true" />
+            <element signature="e#3163#3164#0" expanded="true" />
+            <element signature="e#3192#3193#0" expanded="true" />
+            <element signature="e#3236#3237#0" expanded="true" />
+            <element signature="e#3272#3273#0" expanded="true" />
+            <element signature="e#3312#3313#0" expanded="true" />
+            <element signature="e#3348#3349#0" expanded="true" />
+            <element signature="e#3406#3407#0" expanded="true" />
+            <element signature="e#3456#3457#0" expanded="true" />
+            <element signature="e#3493#3494#0" expanded="true" />
+            <element signature="e#3526#3527#0" expanded="true" />
+            <element signature="e#3578#3579#0" expanded="true" />
+            <element signature="e#3622#3623#0" expanded="true" />
+            <element signature="e#3661#3662#0" expanded="true" />
+            <element signature="e#3696#3697#0" expanded="true" />
+            <element signature="e#3752#3753#0" expanded="true" />
+            <element signature="e#3800#3801#0" expanded="true" />
+            <element signature="e#3844#3845#0" expanded="true" />
+            <element signature="e#3884#3885#0" expanded="true" />
+            <element signature="e#3950#3951#0" expanded="true" />
+            <element signature="e#4008#4009#0" expanded="true" />
+            <element signature="e#4051#4052#0" expanded="true" />
+            <element signature="e#4090#4091#0" expanded="true" />
+            <element signature="e#4154#4155#0" expanded="true" />
+            <element signature="e#4210#4211#0" expanded="true" />
+            <element signature="e#4243#4244#0" expanded="true" />
+            <element signature="e#4274#4275#0" expanded="true" />
+            <element signature="e#4320#4321#0" expanded="true" />
+            <element signature="e#4360#4361#0" expanded="true" />
+            <element signature="e#4401#4402#0" expanded="true" />
+            <element signature="e#4438#4439#0" expanded="true" />
+            <element signature="e#4498#4499#0" expanded="true" />
+            <element signature="e#4550#4551#0" expanded="true" />
+            <element signature="e#4592#4593#0" expanded="true" />
+            <element signature="e#4630#4631#0" expanded="true" />
+            <element signature="e#4692#4693#0" expanded="true" />
+            <element signature="e#4746#4747#0" expanded="true" />
+            <element signature="e#4791#4792#0" expanded="true" />
+            <element signature="e#4832#4833#0" expanded="true" />
+            <element signature="e#4900#4901#0" expanded="true" />
+            <element signature="e#4960#4961#0" expanded="true" />
+            <element signature="e#4997#4998#0" expanded="true" />
+            <element signature="e#5032#5033#0" expanded="true" />
+            <element signature="e#5086#5087#0" expanded="true" />
+            <element signature="e#5134#5135#0" expanded="true" />
+            <element signature="e#5165#5166#0" expanded="true" />
+            <element signature="e#5195#5196#0" expanded="true" />
+            <element signature="e#5238#5239#0" expanded="true" />
+            <element signature="e#5276#5277#0" expanded="true" />
+            <element signature="e#5313#5314#0" expanded="true" />
+            <element signature="e#5348#5349#0" expanded="true" />
+            <element signature="e#5402#5403#0" expanded="true" />
+            <element signature="e#5450#5451#0" expanded="true" />
+            <element signature="e#5481#5482#0" expanded="true" />
+            <element signature="e#5511#5512#0" expanded="true" />
+            <element signature="e#5554#5555#0" expanded="true" />
+            <element signature="e#5592#5593#0" expanded="true" />
+            <element signature="e#5635#5636#0" expanded="true" />
+            <element signature="e#5674#5675#0" expanded="true" />
+            <element signature="e#5738#5739#0" expanded="true" />
+            <element signature="e#5794#5795#0" expanded="true" />
+            <element signature="e#5836#5837#0" expanded="true" />
+            <element signature="e#5876#5877#0" expanded="true" />
+            <element signature="e#5940#5941#0" expanded="true" />
+            <element signature="e#5998#5999#0" expanded="true" />
+            <element signature="e#6038#6039#0" expanded="true" />
+            <element signature="e#6076#6077#0" expanded="true" />
+            <element signature="e#6136#6137#0" expanded="true" />
+            <element signature="e#6190#6191#0" expanded="true" />
+            <element signature="e#6229#6230#0" expanded="true" />
+            <element signature="e#6264#6265#0" expanded="true" />
+            <element signature="e#6320#6321#0" expanded="true" />
+            <element signature="e#6368#6369#0" expanded="true" />
+            <element signature="e#6404#6405#0" expanded="true" />
+            <element signature="e#6436#6437#0" expanded="true" />
+            <element signature="e#6486#6487#0" expanded="true" />
+            <element signature="e#6528#6529#0" expanded="true" />
+            <element signature="e#6570#6571#0" expanded="true" />
+            <element signature="e#6608#6609#0" expanded="true" />
+            <element signature="e#6670#6671#0" expanded="true" />
+            <element signature="e#6724#6725#0" expanded="true" />
+            <element signature="e#6769#6770#0" expanded="true" />
+            <element signature="e#6810#6811#0" expanded="true" />
+            <element signature="e#6878#6879#0" expanded="true" />
+            <element signature="e#6938#6939#0" expanded="true" />
+            <element signature="e#6979#6980#0" expanded="true" />
+            <element signature="e#7016#7017#0" expanded="true" />
+            <element signature="e#7076#7077#0" expanded="true" />
+            <element signature="e#7128#7129#0" expanded="true" />
+            <element signature="e#7172#7173#0" expanded="true" />
+            <element signature="e#7212#7213#0" expanded="true" />
+            <element signature="e#7278#7279#0" expanded="true" />
+            <element signature="e#7336#7337#0" expanded="true" />
+            <element signature="e#7381#7382#0" expanded="true" />
+            <element signature="e#7422#7423#0" expanded="true" />
+            <element signature="e#7490#7491#0" expanded="true" />
+            <element signature="e#7550#7551#0" expanded="true" />
+            <element signature="e#7591#7592#0" expanded="true" />
+            <element signature="e#7628#7629#0" expanded="true" />
+            <element signature="e#7688#7689#0" expanded="true" />
+            <element signature="e#7740#7741#0" expanded="true" />
+            <element signature="e#7775#7776#0" expanded="true" />
+            <element signature="e#7808#7809#0" expanded="true" />
+            <element signature="e#7858#7859#0" expanded="true" />
+            <element signature="e#7902#7903#0" expanded="true" />
+            <element signature="e#7937#7938#0" expanded="true" />
+            <element signature="e#7970#7971#0" expanded="true" />
+            <element signature="e#8020#8021#0" expanded="true" />
+            <element signature="e#8064#8065#0" expanded="true" />
+            <element signature="e#8098#8099#0" expanded="true" />
+            <element signature="e#8130#8131#0" expanded="true" />
+            <element signature="e#8178#8179#0" expanded="true" />
+            <element signature="e#8220#8221#0" expanded="true" />
+            <element signature="e#8258#8259#0" expanded="true" />
+            <element signature="e#8292#8293#0" expanded="true" />
+            <element signature="e#8346#8347#0" expanded="true" />
+            <element signature="e#8392#8393#0" expanded="true" />
+            <element signature="e#8428#8429#0" expanded="true" />
+            <element signature="e#8460#8461#0" expanded="true" />
+            <element signature="e#8510#8511#0" expanded="true" />
+            <element signature="e#8552#8553#0" expanded="true" />
+            <element signature="e#8590#8591#0" expanded="true" />
+            <element signature="e#8624#8625#0" expanded="true" />
+            <element signature="e#8678#8679#0" expanded="true" />
+            <element signature="e#8724#8725#0" expanded="true" />
+            <element signature="e#8757#8758#0" expanded="true" />
+            <element signature="e#8786#8787#0" expanded="true" />
+            <element signature="e#8830#8831#0" expanded="true" />
+            <element signature="e#8866#8867#0" expanded="true" />
+            <element signature="e#8909#8910#0" expanded="true" />
+            <element signature="e#8948#8949#0" expanded="true" />
+            <element signature="e#9012#9013#0" expanded="true" />
+            <element signature="e#9068#9069#0" expanded="true" />
+            <element signature="e#9103#9104#0" expanded="true" />
+            <element signature="e#9136#9137#0" expanded="true" />
+            <element signature="e#9186#9187#0" expanded="true" />
+            <element signature="e#9230#9231#0" expanded="true" />
+            <element signature="e#9270#9271#0" expanded="true" />
+            <element signature="e#9306#9307#0" expanded="true" />
+            <element signature="e#9364#9365#0" expanded="true" />
+            <element signature="e#9414#9415#0" expanded="true" />
+            <element signature="e#9446#9447#0" expanded="true" />
+            <element signature="e#9476#9477#0" expanded="true" />
+            <element signature="e#9520#9521#0" expanded="true" />
+            <element signature="e#9558#9559#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

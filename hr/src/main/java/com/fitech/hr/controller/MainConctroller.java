@@ -57,6 +57,11 @@ public class MainConctroller {
         return "sys/zzjggl/zzjgwh_add";
     }
 
+    @RequestMapping("/zzjgcx")
+    public String zzjgcx(){
+        return "sys/zzjggl/zzjgcx";
+    }
+
     @RequestMapping("/in")
     @ResponseBody
     public String index2(String aa) {

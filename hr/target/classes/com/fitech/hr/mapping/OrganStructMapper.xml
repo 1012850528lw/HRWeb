@@ -29,13 +29,13 @@
     <sql id="Record_Where_Clause">
         where 1=1
         <if test="record.organId != null and record.organId != ''">
-            and ORGAN_ID = #{record.organId}
+            and ORGAN_ID like "%"#{record.organId}"%"
         </if>
         <if test="record.pareOrganId != null and record.pareOrganId != ''">
-            and PARE_ORGAN_ID = #{pareOrganId}
+            and PARE_ORGAN_ID like "%"#{record.pareOrganId}"%"
         </if>
         <if test="record.organName != null and record.organName != ''">
-            and ORGAN_NAME = #{record.organName}
+            and ORGAN_NAME like "%"#{record.organName}"%"
         </if>
     </sql>
 
@@ -71,30 +71,46 @@
         where ORGAN_ID = #{organId,jdbcType=VARCHAR}
     </select>
 
-    <!--<update id="updateByOrganId" parameterType="com.fitech.hr.model.OrganStruct">-->
-        <!--update hr_organ_struct-->
-        <!--set-->
-        <!--PARE_ORGAN_ID = #{pareOrganId,jdbcType=VARCHAR},-->
-        <!--ORGAN_NAME = #{organName,jdbcType=VARCHAR},-->
-        <!--ORGAN_TYPE_CODE = #{organTypeCode,jdbcTypeCode=VARCHAR},-->
-        <!--ORGAN_NOTE = #{organNote,jdbcType=VARCHAR},-->
-        <!--ESTABLISH_DATE = #{establishDate,jdbcType=DATE},-->
-        <!--REVOKE_DATE = #{revokeDate,jdbcType=DATE},-->
-        <!--REVOKE_REASON = #{revokeReason,jdbcType=VARCHAR},-->
-        <!--HEAD_EMPLOYEE_ID = #{headEmployeeId,jdbcType=VARCHAR},-->
-        <!--UN_SOCIAL_CREDIT_CODE = #{unSocialCreditCode,jdbcType=VARCHAR},-->
-        <!--ORGAN_ADDRESS = #{organAddress,jdbcType=VARCHAR},-->
-        <!--CONTACT_NUMBER = #{contactNumber,jdbcType=VARCHAR},-->
-        <!--BASIC_DEPOSIT_ACCT = #{basicDepositAcct,jdbcType=VARCHAR},-->
-        <!--BASIC_DEPOSIT_BANK = #{basicDepositBank,jdbcType=VARCHAR},-->
-        <!--ORGAN_STATUS = #{organStatus,jdbcType=VARCHAR},-->
-        <!--CREATE_EMPLOYEE_ID = #{createEmployeeId,jdbcType=VARCHAR},-->
-        <!--CREATE_TIME = #{createTime,jdbcType=DATE},-->
-        <!--MDY_EMPLOYEE_ID = #{mdyEmployeeId,jdbcType=VARCHAR},-->
-        <!--MDY_TIME = #{mdyTime,jdbcType=DATE},-->
-        <!--POST = #{post,jdbcType=VARCHAR},-->
-        <!--FAX = #{fax,jdbcType=VARCHAR},-->
-        <!--ORGAN_LEVEL = #{organLevel,jdbcType=VARCHAR}-->
-        <!--where ORGAN_ID = #{organId,jdbcType=VARCHAR}-->
-    <!--</update>-->
+    <update id="updateByOrganId" parameterType="com.fitech.hr.model.OrganStruct">
+        update hr_organ_struct
+        set
+        PARE_ORGAN_ID = #{pareOrganId,jdbcType=VARCHAR},
+        ORGAN_NAME = #{organName,jdbcType=VARCHAR},
+        ORGAN_TYPE_CODE = #{organTypeCode,jdbcType=VARCHAR},
+        ORGAN_NOTE = #{organNote,jdbcType=VARCHAR},
+        ESTABLISH_DATE = #{establishDate,jdbcType=DATE},
+        REVOKE_DATE = #{revokeDate,jdbcType=DATE},
+        REVOKE_REASON = #{revokeReason,jdbcType=VARCHAR},
+        HEAD_EMPLOYEE_ID = #{headEmployeeId,jdbcType=VARCHAR},
+        UN_SOCIAL_CREDIT_CODE = #{unSocialCreditCode,jdbcType=VARCHAR},
+        ORGAN_ADDRESS = #{organAddress,jdbcType=VARCHAR},
+        CONTACT_NUMBER = #{contactNumber,jdbcType=VARCHAR},
+        BASIC_DEPOSIT_ACCT = #{basicDepositAcct,jdbcType=VARCHAR},
+        BASIC_DEPOSIT_BANK = #{basicDepositBank,jdbcType=VARCHAR},
+        ORGAN_STATUS = #{organStatus,jdbcType=VARCHAR},
+        CREATE_EMPLOYEE_ID = #{createEmployeeId,jdbcType=VARCHAR},
+        CREATE_TIME = #{createTime,jdbcType=DATE},
+        MDY_EMPLOYEE_ID = #{mdyEmployeeId,jdbcType=VARCHAR},
+        MDY_TIME = #{mdyTime,jdbcType=DATE},
+        POST = #{post,jdbcType=VARCHAR},
+        FAX = #{fax,jdbcType=VARCHAR},
+        ORGAN_LEVEL = #{organLevel,jdbcType=VARCHAR}
+        where ORGAN_ID = #{organId,jdbcType=VARCHAR}
+    </update>
+
+    <delete id="deleteByOrganId" parameterType="java.lang.String">
+        delete from hr_organ_struct
+        where ORGAN_ID = #{organId,jdbcType=VARCHAR}
+    </delete>
+
+    <insert id="insertOrgan" parameterType="com.fitech.hr.model.OrganStruct">
+        insert into hr_organ_struct
+        values(#{organId,jdbcType=VARCHAR}, #{pareOrganId,jdbcType=VARCHAR},#{organName,jdbcType=VARCHAR},
+        #{organTypeCode,jdbcType=VARCHAR},#{organNote,jdbcType=VARCHAR},#{establishDate,jdbcType=DATE},
+        #{revokeDate,jdbcType=DATE},#{revokeReason,jdbcType=VARCHAR},#{headEmployeeId,jdbcType=VARCHAR},
+        #{unSocialCreditCode,jdbcType=VARCHAR},#{organAddress,jdbcType=VARCHAR},#{contactNumber,jdbcType=VARCHAR},
+        #{basicDepositAcct,jdbcType=VARCHAR},#{basicDepositBank,jdbcType=VARCHAR},#{organStatus,jdbcType=VARCHAR},
+        #{createEmployeeId,jdbcType=VARCHAR},#{mdyEmployeeId,jdbcType=VARCHAR},#{createTime,jdbcType=DATE},
+        #{mdyTime,jdbcType=DATE},#{post,jdbcType=VARCHAR},#{fax,jdbcType=VARCHAR},#{organLevel,jdbcType=VARCHAR})
+    </insert>
 </mapper>

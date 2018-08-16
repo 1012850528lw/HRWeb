@@ -13,5 +13,11 @@ public interface OrganStructService {
 
     OrganStruct selectByOrganId(String organId);
 
-//    int updateByOrganId(OrganStruct record);
+    int updateByOrganId(OrganStruct record);
+
+    int deleteByOrganId(String organId);
+
+    int insertOrgan(OrganStruct record);
+
+    List<OrganStruct> selectTree(String organId);
 }
