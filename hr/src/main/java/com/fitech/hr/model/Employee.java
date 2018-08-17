@@ -13,7 +13,7 @@ public class Employee {
     private String identId; // 身份证号
     private String mobile; // 主用移动电话
     private String postalAddress; // 通讯地址
-    private String poatalPost; // 通讯地址邮编
+    private String postalPost; // 通讯地址邮编
     private String baseLocation; // 工作基地
     private String socialPayLocation; // 社保缴纳地区
     private String eduBackLevelCode; // 最高学历代码
@@ -128,12 +128,12 @@ public class Employee {
         this.postalAddress = postalAddress;
     }
 
-    public String getPoatalPost() {
-        return poatalPost;
+    public String getPostalPost() {
+        return postalPost;
     }
 
-    public void setPoatalPost(String poatalPost) {
-        this.poatalPost = poatalPost;
+    public void setPostalPost(String postalPost) {
+        this.postalPost = postalPost;
     }
 
     public String getBaseLocation() {

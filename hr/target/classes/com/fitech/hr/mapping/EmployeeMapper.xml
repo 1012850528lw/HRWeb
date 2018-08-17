@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fitech.hr.dao.EmployeeDAO">
+    <resultMap id="EmployeeResult" type="com.fitech.hr.model.Employee">
+        <result column="EMPLOYEE_ID" property="employeeId" jdbcType="VARCHAR"/>
+        <result column="ORGAN_ID" property="organId" jdbcType="VARCHAR"/>
+        <result column="EMPLOYEE_NAME" property="employeeName" jdbcType="VARCHAR"/>
+        <result column="POST_NAME" property="postName" jdbcType="VARCHAR"/>
+        <result column="SEX_TYPE_CODE" property="sexTypeCode" jdbcType="VARCHAR"/>
+        <result column="BIRTH_DATE" property="birthDate" jdbcType="DATE"/>
+        <result column="AGE" property="age" jdbcType="INTEGER"/>
+        <result column="IDENTID" property="identId" jdbcType="VARCHAR"/>
+        <result column="MOBILE" property="mobile" jdbcType="VARCHAR"/>
+        <result column="POSTAL_ADDRESS" property="postalAddress" jdbcType="VARCHAR"/>
+        <result column="POSTAL_POST" property="postalPost" jdbcType="VARCHAR"/>
+        <result column="BASE_LOCATION" property="baseLocation" jdbcType="VARCHAR"/>
+        <result column="SOCIAL_PAY_LOCATION" property="socialPayLocation" jdbcType="VARCHAR"/>
+        <result column="EDU_BACK_LEVEL_CODE" property="eduBackLevelCode" jdbcType="VARCHAR"/>
+        <result column="GRAD_DATE" property="gradDate" jdbcType="DATE"/>
+        <result column="GRAD_SCHOOL_NAME" property="gradSchoolName" jdbcType="VARCHAR"/>
+        <result column="GRAD_PROFESS_NAME" property="gradProfessName" jdbcType="VARCHAR"/>
+        <result column="GRAD_SCHOOL_TYPE_CODE" property="gradSchoolTypeCode" jdbcType="VARCHAR"/>
+        <result column="JOIN_WORK_DATE" property="joinSchoolDate" jdbcType="DATE"/>
+        <result column="WORK_AGE" property="workAge" jdbcType="INTEGER"/>
+        <result column="JOIN_COMP_DATE" property="joinCompDate" jdbcType="DATE"/>
+        <result column="COMP_AGE" property="compAge" jdbcType="INTEGER"/>
+        <result column="LAST_CONT_TYPE_CODE" property="lastContTypeCode" jdbcType="VARCHAR"/>
+        <result column="LAST_CONT_BEGIN_DATE" property="lastContBeginDate" jdbcType="DATE"/>
+        <result column="LAST_CONT_END_DATE" property="lastContEndDate" jdbcType="DATE"/>
+        <result column="RESUME_SOURCE" property="resumeSource" jdbcType="VARCHAR"/>
+        <result column="PAY_CARD_ID" property="payCardId" jdbcType="VARCHAR"/>
+        <result column="PAY_CARD_BANK_NAME" property="payCardBankName" jdbcType="VARCHAR"/>
+        <result column="DINGDING_OPEN_STATUS" property="dingdingOpenStatus" jdbcType="VARCHAR"/>
+        <result column="MAIL_OPEN_STATUS" property="mailOpenStatus" jdbcType="VARCHAR"/>
+        <result column="WIPE_SYS_OPEN_STATUS" property="wipeSysOpenStatus" jdbcType="VARCHAR"/>
+        <result column="TRAIN_SYS_OPEN_STATUS" property="trainSysOpenStatus" jdbcType="VARCHAR"/>
+        <result column="EMPLOYEE_STATUS" property="employeeStatus" jdbcType="VARCHAR"/>
+        <result column="PUT_OFF_DATE" property="putOffDate" jdbcType="DATE"/>
+        <result column="BECOME_DATE" property="becomeDate" jdbcType="DATE"/>
+        <result column="LEAVEL_DATE" property="leavelDate" jdbcType="DATE"/>
+        <result column="LEAVEL_REASON" property="leavelReason" jdbcType="VARCHAR"/>
+        <result column="LEAVEL_NOTE" property="leavelNote" jdbcType="VARCHAR"/>
+        <result column="PROFESS_CERT" property="professCert" jdbcType="VARCHAR"/>
+        <result column="REMARK" property="remark" jdbcType="VARCHAR"/>
+        <result column="CREATE_EMPLOYEE_ID" property="createEmployeeId" jdbcType="VARCHAR"/>
+        <result column="CREATE_TIME" property="createTime" jdbcType="DATE"/>
+        <result column="MDY_EMPLOYEE_ID" property="mdyEmployeeId" jdbcType="VARCHAR"/>
+        <result column="MDY_TIME" property="mdyTime" jdbcType="DATE"/>
+    </resultMap>
+</mapper>
