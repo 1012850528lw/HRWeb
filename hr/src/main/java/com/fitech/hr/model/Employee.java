@@ -9,11 +9,13 @@ public class Employee {
     private String postName; // 职务/岗位名称
     private String sexTypeCode; // 性别类型代码 01男 02女
     private Date birthDate; // 出生日期
-    private int age; // 年龄
+    private Integer age; // 年龄
     private String identId; // 身份证号
     private String mobile; // 主用移动电话
     private String postalAddress; // 通讯地址
     private String postalPost; // 通讯地址邮编
+    private String residAddress; // 户籍地址
+    private String residPost; // 户籍地址邮编
     private String baseLocation; // 工作基地
     private String socialPayLocation; // 社保缴纳地区
     private String eduBackLevelCode; // 最高学历代码
@@ -22,9 +24,9 @@ public class Employee {
     private String gradProfessName; // 毕业专业名称
     private String gradSchoolTypeCode; // 毕业院校类型代码
     private Date joinWorkDate; // 参加工作日期
-    private int workAge; // 工龄
+    private Integer workAge; // 工龄
     private Date joinCompDate; // 入司日期
-    private int compAge; // 司龄
+    private Integer compAge; // 司龄
     private String lastContTypeCode; // 最近一次合同类型代码
     private Date lastContBeginDate; // 最近一次合同开始日期
     private Date lastContEndDate; // 最近一次合同到期日期
@@ -47,6 +49,22 @@ public class Employee {
     private Date createTime; // 创建日期
     private String mdyEmployeeId; // 修改员工号
     private Date mdyTime; // 修改时间
+
+    public String getResidAddress() {
+        return residAddress;
+    }
+
+    public void setResidAddress(String residAddress) {
+        this.residAddress = residAddress;
+    }
+
+    public String getResidPost() {
+        return residPost;
+    }
+
+    public void setResidPost(String residPost) {
+        this.residPost = residPost;
+    }
 
     public String getEmployeeId() {
         return employeeId;
@@ -96,11 +114,11 @@ public class Employee {
         this.birthDate = birthDate;
     }
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 
@@ -200,11 +218,11 @@ public class Employee {
         this.joinWorkDate = joinWorkDate;
     }
 
-    public int getWorkAge() {
+    public Integer getWorkAge() {
         return workAge;
     }
 
-    public void setWorkAge(int workAge) {
+    public void setWorkAge(Integer workAge) {
         this.workAge = workAge;
     }
 
@@ -216,11 +234,11 @@ public class Employee {
         this.joinCompDate = joinCompDate;
     }
 
-    public int getCompAge() {
+    public Integer getCompAge() {
         return compAge;
     }
 
-    public void setCompAge(int compAge) {
+    public void setCompAge(Integer compAge) {
         this.compAge = compAge;
     }
 

@@ -30,28 +30,18 @@ function tableInit(url) {
                 align: 'center'
             },
             {
+                field: 'roleName',
+                title: '角色名称',
+                align: 'center'
+            },
+            {
                 field: 'userOpenStatus',
                 title: '用户开通状态',
                 align: 'center'
             },
             {
-                field: 'loginHomePage',
-                title: '登录首页',
-                align: 'center'
-            },
-            {
                 field: 'authOrganId',
-                title: '用户最高权限组织编号',
-                align: 'center'
-            },
-            {
-                field: 'startDate',
-                title: '启用日期',
-                align: 'center'
-            },
-            {
-                field: 'stopDate',
-                title: '停用日期',
+                title: '组织编号',
                 align: 'center'
             },
             {

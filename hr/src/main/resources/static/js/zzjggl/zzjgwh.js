@@ -1,192 +1,42 @@
-function tableInit(url,flag) {
-    var tableData = [
-        {
-            title: '操作',
-            align: 'center',
-            events: operateEvents,
-            formatter: operationFormatter
-        },
-        {
-            field: 'organId',
-            title: '组织编号',
-            align: 'center'
-        },
-        {
-            field: 'pareOrganId',
-            title: '上级组织编号',
-            align: 'center'
-        },
-        {
-            field: 'organName',
-            title: '组织名称',
-            align: 'center',
-            formatter: emptyWidth
-        },
-        {
-            field: 'organTypeCode',
-            title: '组织类型代码',
-            align: 'center'
-        },
-        {
-            field: 'organNote',
-            title: '组织职能描述',
-            align: 'center',
-            formatter:emptyWidth
-        },
-        {
-            field: 'establishDate',
-            title: '成立日期',
-            align: 'center',
-            formatter: emptyWidth
-        },
-        {
-            field: 'revokeDate',
-            title: '撤销日期',
-            align: 'center'
-        },
-        {
-            field: 'revokeReason',
-            title: '撤销原因',
-            align: 'center',
-            formatter: emptyWidth
-        },
-        {
-            field: 'headEmployeeId',
-            title: '负责人员工号',
-            align: 'center',
-            formatter: emptyWidth
-        },
-        {
-            field: 'unSocialCreditCode',
-            title: '统一社会信用代码',
-            align: 'center',
-            formatter: emptyWidth
-        },
-        {
-            field: 'organAddress',
-            title: '地址',
-            align: 'center',
-            formatter: emptyWidth
-        },
-        {
-            field: 'contactNumber',
-            title: '联系电话',
-            align: 'center',
-            formatter: emptyWidth
-        },
-        {
-            field: 'basicDepositAcct',
-            title: '基本户账号',
-            align: 'center',
-            formatter: emptyWidth
-        },
-        {
-            field: 'basicDepositBank',
-            title: '基本户开户行名称',
-            align: 'center',
-            formatter: emptyWidth
-        },
-        {
-            field: 'organStatus',
-            title: '组织状态代码',
-            align: 'center'
-        },
-        {
-            field: 'createEmployeeId',
-            title: '创建员工号',
-            align: 'center'
-        },
-        {
-            field: 'mdyEmployeeId',
-            title: '修改员工号',
-            align: 'center'
-        },
-        {
-            field: 'createTime',
-            title: '创建时间',
-            align: 'center'
-        },
-        {
-            field: 'mdyTime',
-            title: '修改时间',
-            align: 'center'
-        },
-        {
-            field: 'post',
-            title: '邮编',
-            align: 'center'
-        },
-        {
-            field: 'fax',
-            title: '传真',
-            align: 'center'
-        },
-        {
-            field: 'organLevel',
-            title: '组织级别',
-            align: 'center'
-        }
-    ];
-    if(flag === "zzjgcx"){
-        var data = tableData.shift();
-    }
-    $("#organ_table").bootstrapTable({
-        url: url,
-        method: 'get',
-        cache: false,
-        toolbar: '#toolbar',
-        pagination: true,
-        pageSize: 10,
-        pageNumber: 1,
-        pageList: [10, 25, 50],
-        search: false,
-        queryParams: queryParams,
-        sidePagination: 'server',
-        showColumns: true,
-        showExport: false,
-        showRefresh: true,
-        minimumCountColumns: 1,
-        clickToSelect: true,
-        smartDisplay: true,
-        cardView: false,
-        columns: tableData
-    });
-
-    function queryParams(params) {
-        var temp = {
-            pageSize: params.limit,
-            pageNumber: params.offset,
-            organId: $("#organId").val(),
-            pareOrganId: $("#pareOrganId").val(),
-            organName: $("#organName").val()
-        };
-        return temp;
-    }
-}
-
-function searchOrgan() {
-    $("#organ_table").bootstrapTable('destroy');
-    tableInit("/organ/getList","zzjgcx");
-}
-
 function treeInit() {
     $("ul li").remove();
-    layui.use('tree', function () {
+    layui.use(['tree','form'], function () {
+        var form = layui.form;
         layui.tree({
             elem: '#organ_tree',
             nodes: getTreeData(),
             click: function (item) {
-                var tableData = [];
                 $.ajax({
                     type: "get",
-                    url: "/organ/selectTree?organId="+item.organId,
+                    url: "/organ/getOne?organId="+item.organId,
                     data: "",
                     async: false,
                     dataType: "json",
                     success: function (data) {
-                        tableData = JSON.parse(JSON.stringify(data));
-                        $("#organ_table").bootstrapTable("removeAll");
-                        $("#organ_table").bootstrapTable('append',tableData);
+                        form.val('organForm',{
+                            "organId":data.organId,
+                            "pareOrganId": data.pareOrganId,
+                            "organName": data.organName,
+                            "organTypeCode": data.organTypeCode,
+                            "organNote": data.organNote,
+                            "establishDate": data.establishDate,
+                            "revokeDate": data.revokeDate,
+                            "revokeReason": data.revokeReason,
+                            "headEmployeeId": data.headEmployeeId,
+                            "usSocialCreditCode": data.unSocialCreditCode,
+                            "organAddress": data.organAddress,
+                            "contactNumber": data.contactNumber,
+                            "basicDepositAcct": data.basicDepositAcct,
+                            "basicDepositBank": data.basicDepositBank,
+                            "organStatus": data.organStatus,
+                            "createEmployeeId": data.createEmployeeId,
+                            "mdyEmployeeId": data.mdyEmployeeId,
+                            "createTime": data.createTime,
+                            "mdyTime": data.mdyTime,
+                            "post": data.post,
+                            "fax": data.fax,
+                            "organLevel": data.organLevel
+                        })
                     }
                 });
             }
@@ -251,59 +101,6 @@ function buildChildren(organId) {
     return treeChild;
 }
 
-function emptyWidth(value, row, index) {
-    var div = "<div style='width:250px;'>"+value+"</div>";//调列宽，在td中嵌套一个div，调整div大小
-    return div;
-}
-
-function operationFormatter(value, row, index) {
-    return [
-        '<div style=\'width:200px;\'></div>',
-        '<span class="modifiedOperate" style="margin-left:5px;color: white;text-align: center;background: #fe5722;padding: 4px 16px;cursor: pointer;">修改</span>',
-        '<span class="deleteOperate" style="margin-left:5px;color: white;text-align: center;background: #fe5722;padding: 4px 16px;cursor: pointer;">删除</span>'
-    ].join('');
-}
-
-window.operateEvents = {
-    'click .modifiedOperate': function (e, value, row) {
-        parent.layer.open({
-            type: 2,
-            title: '修改组织',
-            shade: 0.1,
-            shadeClose: true,
-            area: ['70%','70%'],
-            maxmin: true,
-            content: '/organ/getOne?organId='+row.organId,
-            end: function () {
-                $("#organ_table").bootstrapTable('refresh');
-                treeInit();
-            }
-        });
-    },
-    'click .deleteOperate': function (e, value, row) {
-        parent.layer.confirm("是否删除此条记录?",{
-            shade: false,
-            btn: ['确定', '取消']
-        }, function () {
-            $.ajax({
-                type: "get",
-                url: "/organ/deleteOrgan",
-                dataType: "text",
-                data: {"organId": row.organId},
-                error: function () {
-                    showInfo("系统错误");
-                },
-                success: function () {
-                    showInfo("删除成功");
-                    $("#organ_table").bootstrapTable('refresh');
-                    treeInit();
-                    closeAddShow();
-                }
-            });
-        })
-    }
-};
-
 $('#form_organ_edit').bootstrapValidator({
     message: 'This value is not valid',
     excluded: ':disabled',
@@ -344,20 +141,12 @@ function updateOrgan() {
         data: $("#form_organ_edit").serialize(),
         dataType: "text",
         success: function (data) {
-            showInfo("菜单修改成功");
-            closeAddShow();
+            showInfo("菜单保存成功");
         },
         error: function (data) {
             showInfo("系统错误");
         }
     });
-}
-
-function closeAddShow() {
-    setTimeout(function () {
-        var index = parent.layer.getFrameIndex(window.name);
-        parent.layer.close(index);
-    },200);
 }
 
 function showInfo(str) {
@@ -422,7 +211,7 @@ function insertOrgan() {
         type: "get",
         url: "/organ/insertOrgan",
         async: false,
-        data: $("#form_organ_add").serialize(),
+        data: $("#form_organ_edit").serialize(),
         dataType: "text",
         success: function () {
             showInfo("菜单添加成功");

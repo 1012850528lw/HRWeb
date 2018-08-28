@@ -10,6 +10,15 @@ public class UserManage {
     private String authOrganId;//用户最高权限组织编号
     private Date startDate;//启用日期
     private Date stopDate;//停用日期
+    private String roleName; // 角色名称
+
+    public String getRoleName() {
+        return roleName;
+    }
+
+    public void setRoleName(String roleName) {
+        this.roleName = roleName;
+    }
 
     public String getEmployeeId() {
         return employeeId;

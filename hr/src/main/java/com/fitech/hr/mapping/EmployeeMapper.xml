@@ -13,6 +13,8 @@
         <result column="MOBILE" property="mobile" jdbcType="VARCHAR"/>
         <result column="POSTAL_ADDRESS" property="postalAddress" jdbcType="VARCHAR"/>
         <result column="POSTAL_POST" property="postalPost" jdbcType="VARCHAR"/>
+        <result column="RESID_ADDRESS" property="residAddress" jdbcType="VARCHAR"/>
+        <result column="RESID_POST" property="residPost" jdbcType="VARCHAR"/>
         <result column="BASE_LOCATION" property="baseLocation" jdbcType="VARCHAR"/>
         <result column="SOCIAL_PAY_LOCATION" property="socialPayLocation" jdbcType="VARCHAR"/>
         <result column="EDU_BACK_LEVEL_CODE" property="eduBackLevelCode" jdbcType="VARCHAR"/>
@@ -20,7 +22,7 @@
         <result column="GRAD_SCHOOL_NAME" property="gradSchoolName" jdbcType="VARCHAR"/>
         <result column="GRAD_PROFESS_NAME" property="gradProfessName" jdbcType="VARCHAR"/>
         <result column="GRAD_SCHOOL_TYPE_CODE" property="gradSchoolTypeCode" jdbcType="VARCHAR"/>
-        <result column="JOIN_WORK_DATE" property="joinSchoolDate" jdbcType="DATE"/>
+        <result column="JOIN_WORK_DATE" property="joinWorkDate" jdbcType="DATE"/>
         <result column="WORK_AGE" property="workAge" jdbcType="INTEGER"/>
         <result column="JOIN_COMP_DATE" property="joinCompDate" jdbcType="DATE"/>
         <result column="COMP_AGE" property="compAge" jdbcType="INTEGER"/>
@@ -47,4 +49,52 @@
         <result column="MDY_EMPLOYEE_ID" property="mdyEmployeeId" jdbcType="VARCHAR"/>
         <result column="MDY_TIME" property="mdyTime" jdbcType="DATE"/>
     </resultMap>
+
+    <sql id="Count_Where_Clause">
+        where 1=1
+        <if test="employee.employeeId != null and employee.employeeId != ''">
+            and EMPLOYEE_ID = #{employee.employeeId}
+        </if>
+        <if test="employee.employeeName != null and employeeName != '' ">
+            and EMPLOYEE_NAME = #{employee.employeeName}
+        </if>
+        <if test="employee.organId != null and employee.organId != ''">
+            and ORGAN_ID = #{employee.organId}
+        </if>
+    </sql>
+
+    <sql id="Employee_Columns_List">
+        EMPLOYEE_ID, ORGAN_ID, EMPLOYEE_NAME, POST_NAME, SEX_TYPE_CODE, BIRTH_DATE, AGE, IDENT_ID,
+        MOBILE, POSTAL_ADDRESS, POSTAL_POST, RESID_ADDRESS, RESID_POST, BASE_LOCATION, SOCIAL_PAY_LOCATION
+        EDU_BANK_LEVEL_CODE, GRAD_DATE, GRAD_SCHOOL_NAME, GRAD_PROFESS_NAME, GRAD_SCHOOL_TYPE_CODE,
+        JOIN_WORK_DATE, WORK_AGE, JOIN_COMP_DATE, COMP_AGE, LAST_CONT_TYPE_CODE, LAST_CONT_BEGIN_DATE,
+        LAST_CONT_END_DATE, RESUME_SOURCE, PAY_CARD_ID, PAY_CARD_BANK_NAME, DINGDING_OPEN_STATUS,
+        MAIL_OPEN_STATUS, WIPE_SYS_OPEN_STATUS, TRAIN_SYS_OPEN_STATUS, EMPLOYEE_STATUS, PUT_OFF_DATE,
+        BECOME_DATE, LEAVE_DATE, LEAVE_REASON, LEAVE_NOTE, PROFESS_CERT, REMARK
+    </sql>
+
+    <select id="countByRecord" parameterType="com.fitech.hr.model.Employee" resultType="java.lang.Long">
+        select count(*) from hr_employee
+    </select>
+
+    <select id="selectByRecord" resultMap="EmployeeResult">
+        select
+        <include refid="Employee_Columns_List"/>
+        from hr_employee
+        <include refid="Count_Where_Clause"/>
+        limit #{pageNumber,jdbcType=VARCHAR}, #{pageSize,jdbcType=VARCHAR}
+    </select>
+
+    <select id="countByOrganId" parameterType="java.lang.String" resultType="java.lang.Long">
+        select count(*) from hr_employee where ORGAN_ID = #{organId,jdbcType=VARCHAR}
+    </select>
+
+    <select id="selectByOrganId" resultMap="EmployeeResult">
+        select
+        <include refid="Employee_Columns_List"/>
+        from hr_employee
+        where ORGAN_ID = #{organId,jdbcType=VARCHAR}
+        limit #{pageNumber,jdbcType=VARCHAR}, #{pageSize,jdbcType=VARCHAR}
+    </select>
+
 </mapper>

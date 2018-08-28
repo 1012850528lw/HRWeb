@@ -18,11 +18,10 @@ public class MenuManageServiceImpl implements MenuManageService {
 
     @Override
     public JSONObject selectByRecord(MenuManage record, int pageSize, int pageNumber) {
-
-        JSONObject returnJson = new JSONObject();
-        returnJson.put("total",this.menuManageDAO.countByRecord(record));
-        returnJson.put("rows", this.menuManageDAO.selectByRecord(record, pageSize, pageNumber));
-        return returnJson;
+        JSONObject result = new JSONObject();
+        result.put("total",this.menuManageDAO.countByRecord(record));
+        result.put("rows", this.menuManageDAO.selectByRecord(record, pageSize, pageNumber));
+        return result;
     }
 
     @Override

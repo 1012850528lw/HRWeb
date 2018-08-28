@@ -15,10 +15,10 @@ public class UserManageServiceImpl implements UserManageService {
 
     @Override
     public JSONObject selectByRecord(UserManage record, int pageSize, int pageNumber) {
-        JSONObject str = new JSONObject();
-        str.put("total", this.userManageDAO.countByRecord(record));
-        str.put("rows", this.userManageDAO.selectByRecord(record,pageSize,pageNumber));
-        return str;
+        JSONObject result = new JSONObject();
+        result.put("total", this.userManageDAO.countByRecord(record));
+        result.put("rows", this.userManageDAO.selectByRecord(record,pageSize,pageNumber));
+        return result;
     }
 
     @Override

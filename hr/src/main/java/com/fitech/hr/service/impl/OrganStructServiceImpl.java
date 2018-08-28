@@ -24,10 +24,10 @@ public class OrganStructServiceImpl implements OrganStructService {
 
     @Override
     public JSONObject selectByRecord(OrganStruct record, int pageSize, int pageNumber) {
-        JSONObject str = new JSONObject();
-        str.put("total", this.organStructDAO.countByRecord(record));
-        str.put("rows", this.organStructDAO.selectByRecord(record,pageSize,pageNumber));
-        return str;
+        JSONObject result = new JSONObject();
+        result.put("total", this.organStructDAO.countByRecord(record));
+        result.put("rows", this.organStructDAO.selectByRecord(record,pageSize,pageNumber));
+        return result;
     }
 
     @Override

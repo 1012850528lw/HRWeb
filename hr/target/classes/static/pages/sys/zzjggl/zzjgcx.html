@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -15,27 +15,120 @@
         <ul id="organ_tree" style="margin-top: 20px;"></ul>
     </div>
     <div class="layui-col-md10">
-        <form class="form-horizontal layui-form" style="margin-top: 20px">
-            <div class="form-group" style="margin-top: 5px">
-                <div class="col-sm-1"></div>
-                <label class="col-sm-1 control-label">组织编号</label>
-                <div class="col-sm-2">
-                    <input type="text" class="form-control" id="organId" placeholder="组织编号"/>
+        <div class="container" style="margin-top: 20px">
+            <form class="form-horizontal layui-form" lay-filter="organForm">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">组织编号</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="organId" name="organId" disabled="disabled"/>
+                    </div>
+                    <label class="col-sm-2 control-label">上级组织编号</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="pareOrganId" name="pareOrganId" disabled="disabled"/>
+                    </div>
                 </div>
-                <label class="col-sm-1 control-label">上级编号</label>
-                <div class="col-sm-2">
-                     <input type="text" class="form-control" id="pareOrganId" placeholder="上级编号"/>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">组织名称</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="organName" name="organName" disabled="disabled"/>
+                    </div>
+                    <label class="col-sm-2 control-label">组织类型代码</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="organTypeCode" name="organTypeCode" disabled="disabled"/>
+                    </div>
                 </div>
-                <label class="col-sm-1 control-label">编号名称</label>
-                <div class="col-sm-2">
-                    <input type="text" class="form-control" id="organName" placeholder="编号名称"/>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">组织职能描述</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="organNote" name="organNote" disabled="disabled"/>
+                    </div>
+                    <label class="col-sm-2 control-label">成立日期</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="establishDate" name="establishDate" disabled="disabled"/>
+                    </div>
                 </div>
-                <div class="col-sm-2">
-                     <input type="button" class="form-control btn-success" onclick="searchOrgan()" value="查询"/>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">撤销日期</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="revokeDate" name="revokeDate" disabled="disabled"/>
+                    </div>
+                    <label class="col-sm-2 control-label">撤销原因</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="revokeReason" name="revokeReason" disabled="disabled"/>
+                    </div>
                 </div>
-            </div>
-        </form>
-        <table id="organ_table" data-toggle="table" style="word-break:break-all;"></table>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">负责人员工号</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="headEmployeeId" name="headEmployeeId" disabled="disabled"/>
+                    </div>
+                    <label class="col-sm-2 control-label">统一社会信用代码</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="unSocialCreditCode" name="unSocialCreditCode" disabled="disabled"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">地址</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="organAddress" name="organAddress" disabled="disabled"/>
+                    </div>
+                    <label class="col-sm-2 control-label">联系电话</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="contactNumber" name="contactNumber" disabled="disabled"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">基本户账号</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="basicDepositAcct" name="basicDepositAcct" disabled="disabled"/>
+                    </div>
+                    <label class="col-sm-2 control-label">基本户开户行名称</label>
+                    <div class="col-sm-4">
+                        <input class="form-control" type="text" id="basicDepositBank" name="basicDepositBank" disabled="disabled"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">组织状态代码</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="organStatus" name="organStatus" disabled="disabled"/>
+                    </div>
+                    <label class="col-sm-2 control-label">创建员工号</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="createEmployeeId" name="createEmployeeId" disabled="disabled"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">修改员工号</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="mdyEmployeeId" name="mdyEmployeeId" disabled="disabled"/>
+                    </div>
+                    <label class="col-sm-2 control-label">创建时间</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="createTime" name="createTime" disabled="disabled"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">修改时间</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="mdyTime" name="mdyTime" disabled="disabled"/>
+                    </div>
+                    <label class="col-sm-2 control-label">邮编</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="post" name="post" disabled="disabled"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">传真</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="fax" name="fax" disabled="disabled"/>
+                    </div>
+                    <label class="col-sm-2 control-label">组织级别</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="organLevel" name="organLevel" disabled="disabled"/>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 </body>
@@ -47,10 +140,4 @@
 <script src="../plugin/bootstrapValidator/bootstrapValidator.js"></script>
 <script src="../plugin/layer/layer.js"></script>
 <script src="../js/zzjggl/zzjgwh.js"></script>
-<script type="text/javascript">
-    $(function () {
-        $("#organ_table").bootstrapTable('destroy');
-        tableInit("/organ/getList","zzjgcx");
-    });
-</script>
 </html>

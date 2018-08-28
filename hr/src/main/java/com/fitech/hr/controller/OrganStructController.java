@@ -32,12 +32,8 @@ public class OrganStructController {
 
     @ResponseBody
     @RequestMapping("getOne")
-    public ModelAndView selectByOrganId(String organId){
-        ModelAndView modelAndView = new ModelAndView();
-        OrganStruct organStruct = this.organStructService.selectByOrganId(organId);
-        modelAndView.addObject("organ",organStruct);
-        modelAndView.setViewName("sys/zzjggl/zzjgwh_edit");
-        return modelAndView;
+    public OrganStruct selectByOrganId(String organId){
+        return this.organStructService.selectByOrganId(organId);
     }
 
 

@@ -41,6 +41,7 @@
         <result column="AUTH_ORGAN_Id" property="authOrganId" jdbcType="VARCHAR"/>
         <result column="START_DATE" property="startDate" jdbcType="DATE"/>
         <result column="STOP_DATE" property="stopDate" jdbcType="DATE"/>
+        <result column="ROLE_NAME" property="roleName" jdbcType="VARCHAR"/>
     </resultMap>
 
     <sql id="User_Cloumns_List">
@@ -53,10 +54,14 @@
     </select>
 
     <select id="selectByRecord" resultMap="UserResultMap">
-        select
-        <include refid="User_Cloumns_List"/>
-        from hr_sys_user
+        select u.EMPLOYEE_ID,u.PASSWORD,r.ROLE_NAME,u.AUTH_ORGAN_ID,u.USER_OPEN_STATUS
+        from
+        hr_sys_role r,
+        hr_sys_user u,
+        hr_sys_user_role s
         <include refid="Count_Where_Clause"/>
+        and r.ROLE_ID = s.ROLE_ID
+        and u.EMPLOYEE_ID = s.EMPLOYEE_ID
         limit #{pageNumber,jdbcType=VARCHAR},#{pageSize,jdbcType=VARCHAR}
     </select>
 

@@ -48,4 +48,11 @@
 <script src="../plugin/bootstrap-table-zh-CN.js"></script>
 <script src="../plugin/bootstrapValidator/bootstrapValidator.js"></script>
 <script src="../plugin/layer/layer.js"></script>
+<script src="../js/yggl/ygwh.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("#employee_table").bootstrapTable('destroy');
+        tableInit("/employee/getList");
+    });
+</script>
 </html>

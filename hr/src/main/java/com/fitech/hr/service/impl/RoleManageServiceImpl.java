@@ -15,10 +15,10 @@ public class RoleManageServiceImpl implements RoleManageService {
 
     @Override
     public JSONObject selectByRecord(RoleManage record, int pageSize, int pageNumber) {
-        JSONObject str = new JSONObject();
-        str.put("total", this.roleManageDao.countByRecord(record));
-        str.put("rows", this.roleManageDao.selectByRecord(record,pageSize,pageNumber));
-        return str;
+        JSONObject result = new JSONObject();
+        result.put("total", this.roleManageDao.countByRecord(record));
+        result.put("rows", this.roleManageDao.selectByRecord(record,pageSize,pageNumber));
+        return result;
     }
 
     @Override
