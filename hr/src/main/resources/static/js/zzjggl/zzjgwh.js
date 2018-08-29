@@ -1,6 +1,8 @@
-function treeInit() {
+function treeInit(flag) {
     $("ul li").remove();
-    layui.use(['tree','form'], function () {
+    layui.use(['tree','form','jquery','layer'], function () {
+        window.jQuery = window.$ = layui.jquery;
+        window.layer = layui.layer;
         var form = layui.form;
         layui.tree({
             elem: '#organ_tree',
@@ -41,9 +43,48 @@ function treeInit() {
                 });
             }
         });
+        if(flag === "zzjgwh"){
+            //添加操作的图标(即鼠标划过时显示的添加，修改，删除的按钮组)
+            $("#organ_tree").find("a").after("<i class='layui-icon add select hide '></i>"+
+                "<i class='layui-icon del select hide'></i>");
+            //显示/隐藏 分类的操作栏
+            $("#organ_tree").on({
+                mouseover: function(event) {
+                    event.stopPropagation();
+                    $(this).children(".select").removeClass("hide")
+                },
+                mouseout: function(event) {
+                    event.stopPropagation();
+                    $(this).children(".select").addClass("hide")
+                }
+            },"li","a");
+        }
     });
 }
-treeInit();
+$("ul#organ_tree").on("click","li .add",function () {
+    var node=$(this).parent().children("a").children("cite");
+    console.log(node.text());
+    parent.layer.open({
+        type: 2,
+        title: '增加组织',
+        shade: 0.1,
+        shadeClose: true,
+        maxmin: true,
+        area: ['70%', '60%'],
+        content: '/zzjgwh_add',
+        end: function () {
+            //treeInit("zzjgwh");
+        }
+    });
+});
+$("ul#organ_tree").on("click","li .del",function () {
+    parent.layer.confirm("是否删除此条记录?",{
+        shade: false,
+        btn: ['确定', '取消']
+    }, function () {
+        closeAddShow();
+    })
+});
 
 var midData = [];
 function getTreeData() {
@@ -89,7 +130,7 @@ function buildChildren(organId) {
             obj1.name = value.organName;
             obj1.pareOrganId = value.pareOrganId;
             obj1.children = buildChildren(value.organId);
-            treeChild.push(obj1)
+            treeChild.push(obj1);
         }else{
             var obj2 = {organId:"",pareOrganId:"",name:"",children:new Array()};
             obj2.organId = value.organId;
@@ -101,37 +142,37 @@ function buildChildren(organId) {
     return treeChild;
 }
 
-$('#form_organ_edit').bootstrapValidator({
-    message: 'This value is not valid',
-    excluded: ':disabled',
-    feedbackIcons: {
-        valid: 'glyphicon glyphicon-ok',
-        invalid: 'glyphicon glyphicon-remove',
-        validating: 'glyphicon glyphicon-refresh'
-    },
-    fields: {
-        organId: {
-            message: '编号不能为空',//默认提示信息
-            validators: {
-                notEmpty: {
-                    message: '编号必填不能为空'
-                }
-            }
-        }
-    }
-}).on(
-    'error.form.bv',
-    function (e) {
-        var $form = $(e.target), validator = $form
-            .data('bootstrapValidator'), $invalidField = validator
-            .getInvalidFields().eq(0), $collapse = $invalidField
-            .parents('.collapse');
-
-        $collapse.collapse('show');
-    }).on('success.form.bv', function (e) {
-    e.preventDefault();
-    updateOrgan();
-});
+// $('#form_organ_edit').bootstrapValidator({
+//     message: 'This value is not valid',
+//     excluded: ':disabled',
+//     feedbackIcons: {
+//         valid: 'glyphicon glyphicon-ok',
+//         invalid: 'glyphicon glyphicon-remove',
+//         validating: 'glyphicon glyphicon-refresh'
+//     },
+//     fields: {
+//         organId: {
+//             message: '编号不能为空',//默认提示信息
+//             validators: {
+//                 notEmpty: {
+//                     message: '编号必填不能为空'
+//                 }
+//             }
+//         }
+//     }
+// }).on(
+//     'error.form.bv',
+//     function (e) {
+//         var $form = $(e.target), validator = $form
+//             .data('bootstrapValidator'), $invalidField = validator
+//             .getInvalidFields().eq(0), $collapse = $invalidField
+//             .parents('.collapse');
+//         $collapse.collapse('show');
+//     }).on('success.form.bv', function (e) {
+//     e.preventDefault();
+//     updateOrgan();
+//     return false;
+// });
 
 function updateOrgan() {
     $.ajax({
@@ -149,28 +190,19 @@ function updateOrgan() {
     });
 }
 
+
 function showInfo(str) {
     parent.layer.msg(str,{
         offset: 't',
         time: 1000,
-        anim: 6
+        anim: 4
     });
 }
-
-function addShow() {
-    parent.layer.open({
-        type: 2,
-        title: '增加组织',
-        shade: 0.1,
-        shadeClose: true,
-        maxmin: true,
-        area: ['70%', '60%'],
-        content: '/zzjgwh_add',
-        end: function () {
-            $("#organ_table").bootstrapTable('refresh');
-            treeInit();
-        }
-    });
+function closeAddShow() {
+    setTimeout(function () {
+        var index = parent.layer.getFrameIndex(window.name);
+        parent.layer.close(index);
+    },200);
 }
 
 $('#form_organ_add').bootstrapValidator({
@@ -214,7 +246,7 @@ function insertOrgan() {
         data: $("#form_organ_edit").serialize(),
         dataType: "text",
         success: function () {
-            showInfo("菜单添加成功");
+            showInfo("添加成功");
             closeAddShow();
         },
         error: function () {

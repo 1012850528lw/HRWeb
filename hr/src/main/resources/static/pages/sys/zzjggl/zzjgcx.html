@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -11,120 +11,120 @@
 </head>
 <body>
 <div class="layui-row" style="margin-right: 5px">
-    <div class="layui-col-md2">
+    <div class="layui-col-md3">
         <ul id="organ_tree" style="margin-top: 20px;"></ul>
     </div>
-    <div class="layui-col-md10">
+    <div class="layui-col-md9">
         <div class="container" style="margin-top: 20px">
-            <form class="form-horizontal layui-form" lay-filter="organForm">
+            <form class="form-horizontal layui-form layui-form-pane" id="form_organ_edit" lay-filter="organForm">
                 <div class="form-group">
-                    <label class="col-sm-2 control-label">组织编号</label>
-                    <div class="col-sm-4">
-                        <input type="text" class="form-control" id="organId" name="organId" disabled="disabled"/>
+                    <label class="layui-form-label">组织编号</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="layui-input" id="organId" name="organId" disabled="disabled"/>
                     </div>
-                    <label class="col-sm-2 control-label">上级组织编号</label>
-                    <div class="col-sm-4">
-                        <input type="text" class="form-control" id="pareOrganId" name="pareOrganId" disabled="disabled"/>
+                    <label class="layui-form-label">上级组织编号</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="layui-input" id="pareOrganId" name="pareOrganId" disabled="disabled"/>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-2 control-label">组织名称</label>
-                    <div class="col-sm-4">
-                        <input type="text" class="form-control" id="organName" name="organName" disabled="disabled"/>
+                    <label class="layui-form-label">组织名称</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="layui-input" id="organName" name="organName" disabled="disabled"/>
                     </div>
-                    <label class="col-sm-2 control-label">组织类型代码</label>
-                    <div class="col-sm-4">
-                        <input type="text" class="form-control" id="organTypeCode" name="organTypeCode" disabled="disabled"/>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">组织职能描述</label>
-                    <div class="col-sm-4">
-                        <input type="text" class="form-control" id="organNote" name="organNote" disabled="disabled"/>
-                    </div>
-                    <label class="col-sm-2 control-label">成立日期</label>
-                    <div class="col-sm-4">
-                        <input type="text" class="form-control" id="establishDate" name="establishDate" disabled="disabled"/>
+                    <label class="layui-form-label">组织类型代码</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="layui-input" id="organTypeCode" name="organTypeCode" disabled="disabled"/>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-2 control-label">撤销日期</label>
-                    <div class="col-sm-4">
-                        <input type="text" class="form-control" id="revokeDate" name="revokeDate" disabled="disabled"/>
+                    <label class="layui-form-label">组织职能描述</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="layui-input" id="organNote" name="organNote" disabled="disabled"/>
                     </div>
-                    <label class="col-sm-2 control-label">撤销原因</label>
-                    <div class="col-sm-4">
-                        <input type="text" class="form-control" id="revokeReason" name="revokeReason" disabled="disabled"/>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">负责人员工号</label>
-                    <div class="col-sm-4">
-                        <input type="text" class="form-control" id="headEmployeeId" name="headEmployeeId" disabled="disabled"/>
-                    </div>
-                    <label class="col-sm-2 control-label">统一社会信用代码</label>
-                    <div class="col-sm-4">
-                        <input type="text" class="form-control" id="unSocialCreditCode" name="unSocialCreditCode" disabled="disabled"/>
+                    <label class="layui-form-label">成立日期</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="layui-input" id="establishDate" name="establishDate" disabled="disabled"/>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-2 control-label">地址</label>
-                    <div class="col-sm-4">
-                        <input type="text" class="form-control" id="organAddress" name="organAddress" disabled="disabled"/>
+                    <label class="layui-form-label">撤销日期</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="layui-input" id="revokeDate" name="revokeDate" disabled="disabled"/>
                     </div>
-                    <label class="col-sm-2 control-label">联系电话</label>
-                    <div class="col-sm-4">
-                        <input type="text" class="form-control" id="contactNumber" name="contactNumber" disabled="disabled"/>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">基本户账号</label>
-                    <div class="col-sm-4">
-                        <input type="text" class="form-control" id="basicDepositAcct" name="basicDepositAcct" disabled="disabled"/>
-                    </div>
-                    <label class="col-sm-2 control-label">基本户开户行名称</label>
-                    <div class="col-sm-4">
-                        <input class="form-control" type="text" id="basicDepositBank" name="basicDepositBank" disabled="disabled"/>
+                    <label class="layui-form-label">撤销原因</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="layui-input" id="revokeReason" name="revokeReason" disabled="disabled"/>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-2 control-label">组织状态代码</label>
-                    <div class="col-sm-4">
-                        <input type="text" class="form-control" id="organStatus" name="organStatus" disabled="disabled"/>
+                    <label class="layui-form-label">负责人员工号</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="layui-input" id="headEmployeeId" name="headEmployeeId" disabled="disabled"/>
                     </div>
-                    <label class="col-sm-2 control-label">创建员工号</label>
-                    <div class="col-sm-4">
-                        <input type="text" class="form-control" id="createEmployeeId" name="createEmployeeId" disabled="disabled"/>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">修改员工号</label>
-                    <div class="col-sm-4">
-                        <input type="text" class="form-control" id="mdyEmployeeId" name="mdyEmployeeId" disabled="disabled"/>
-                    </div>
-                    <label class="col-sm-2 control-label">创建时间</label>
-                    <div class="col-sm-4">
-                        <input type="text" class="form-control" id="createTime" name="createTime" disabled="disabled"/>
+                    <label class="layui-form-label">统一社会信用代码</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="layui-input" id="unSocialCreditCode" name="unSocialCreditCode" disabled="disabled"/>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-2 control-label">修改时间</label>
-                    <div class="col-sm-4">
-                        <input type="text" class="form-control" id="mdyTime" name="mdyTime" disabled="disabled"/>
+                    <label class="layui-form-label">地址</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="layui-input" id="organAddress" name="organAddress" disabled="disabled"/>
                     </div>
-                    <label class="col-sm-2 control-label">邮编</label>
-                    <div class="col-sm-4">
-                        <input type="text" class="form-control" id="post" name="post" disabled="disabled"/>
+                    <label class="layui-form-label">联系电话</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="layui-input" id="contactNumber" name="contactNumber" disabled="disabled"/>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-2 control-label">传真</label>
-                    <div class="col-sm-4">
-                        <input type="text" class="form-control" id="fax" name="fax" disabled="disabled"/>
+                    <label class="layui-form-label">基本户账号</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="layui-input" id="basicDepositAcct" name="basicDepositAcct" disabled="disabled"/>
                     </div>
-                    <label class="col-sm-2 control-label">组织级别</label>
-                    <div class="col-sm-4">
-                        <input type="text" class="form-control" id="organLevel" name="organLevel" disabled="disabled"/>
+                    <label class="layui-form-label">基本户开户行名称</label>
+                    <div class="col-sm-3">
+                        <input class="layui-input" type="text" id="basicDepositBank" name="basicDepositBank" disabled="disabled"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="layui-form-label">组织状态代码</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="layui-input" id="organStatus" name="organStatus" disabled="disabled"/>
+                    </div>
+                    <label class="layui-form-label">创建员工号</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="layui-input" id="createEmployeeId" name="createEmployeeId" disabled="disabled"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="layui-form-label">修改员工号</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="layui-input" id="mdyEmployeeId" name="mdyEmployeeId" disabled="disabled"/>
+                    </div>
+                    <label class="layui-form-label">创建时间</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="layui-input" id="createTime" name="createTime" disabled="disabled"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="layui-form-label">修改时间</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="layui-input" id="mdyTime" name="mdyTime" disabled="disabled"/>
+                    </div>
+                    <label class="layui-form-label">邮编</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="layui-input" id="post" name="post" disabled="disabled"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="layui-form-label">传真</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="layui-input" id="fax" name="fax" disabled="disabled"/>
+                    </div>
+                    <label class="layui-form-label">组织级别</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="layui-input" id="organLevel" name="organLevel" disabled="disabled"/>
                     </div>
                 </div>
             </form>
@@ -140,4 +140,9 @@
 <script src="../plugin/bootstrapValidator/bootstrapValidator.js"></script>
 <script src="../plugin/layer/layer.js"></script>
 <script src="../js/zzjggl/zzjgwh.js"></script>
+<script type="text/javascript">
+    $(function () {
+        treeInit("zzjgcx");
+    });
+</script>
 </html>
