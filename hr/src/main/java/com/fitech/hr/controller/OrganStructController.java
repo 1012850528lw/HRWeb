@@ -17,7 +17,6 @@ public class OrganStructController {
     @Autowired
     private OrganStructService organStructService;
 
-
     @ResponseBody
     @RequestMapping("getAll")
     public List<OrganStruct> selectAllOrgan(){
@@ -28,6 +27,12 @@ public class OrganStructController {
     @RequestMapping("getList")
     public JSONObject selectByRecord(OrganStruct record,int pageSize, int pageNumber){
         return this.organStructService.selectByRecord(record,pageSize,pageNumber);
+    }
+
+    @ResponseBody
+    @RequestMapping("getIds")
+    public OrganStruct selectIdByOrganName(String organName){
+        return this.organStructService.selectIdByOrganName(organName);
     }
 
     @ResponseBody
@@ -45,8 +50,8 @@ public class OrganStructController {
 
     @ResponseBody
     @RequestMapping("deleteOrgan")
-    public int deleteByOrganId(String organId){
-        return this.organStructService.deleteByOrganId(organId);
+    public int deleteByOrganName(String organName){
+        return this.organStructService.deleteByOrganName(organName);
     }
 
     @ResponseBody

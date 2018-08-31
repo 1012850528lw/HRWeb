@@ -53,7 +53,7 @@ public class MainConctroller {
     }
 
     @RequestMapping("/zzjgwh_add")
-    public String zzjgweAdd(){
+    public String zzjgwh_add(){
         return "sys/zzjggl/zzjgwh_add";
     }
 

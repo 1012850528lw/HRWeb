@@ -46,6 +46,11 @@ public class OrganStructServiceImpl implements OrganStructService {
     }
 
     @Override
+    public int deleteByOrganName(String organName) {
+        return this.organStructDAO.deleteByOrganName(organName);
+    }
+
+    @Override
     public int insertOrgan(OrganStruct record) {
         return this.organStructDAO.insertOrgan(record);
     }
@@ -55,6 +60,11 @@ public class OrganStructServiceImpl implements OrganStructService {
         List<OrganStruct> list = new ArrayList<>();
         list.add(this.organStructDAO.selectByOrganId(organId));
         return list;
+    }
+
+    @Override
+    public OrganStruct selectIdByOrganName(String organName) {
+        return this.organStructDAO.selectIdByOrganName(organName);
     }
 
 }

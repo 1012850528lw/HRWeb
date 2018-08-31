@@ -44,7 +44,7 @@ function treeInit(flag) {
             }
         });
         if(flag === "zzjgwh"){
-            //添加操作的图标(即鼠标划过时显示的添加，修改，删除的按钮组)
+            //添加操作的图标(鼠标划过时显示的添加，删除的按钮组)
             $("#organ_tree").find("a").after("<i class='layui-icon add select hide '></i>"+
                 "<i class='layui-icon del select hide'></i>");
             //显示/隐藏 分类的操作栏
@@ -61,9 +61,9 @@ function treeInit(flag) {
         }
     });
 }
+//增加操作
 $("ul#organ_tree").on("click","li .add",function () {
     var node=$(this).parent().children("a").children("cite");
-    console.log(node.text());
     parent.layer.open({
         type: 2,
         title: '增加组织',
@@ -76,13 +76,39 @@ $("ul#organ_tree").on("click","li .add",function () {
             //treeInit("zzjgwh");
         }
     });
+    $.ajax({
+        type: 'get',
+        url: '/organ/getIds?organName='+node.text(),
+        data: '',
+        async:false,
+        dataType: 'json',
+        success: function (data) {
+
+        }
+    })
 });
+
+//删除操作
 $("ul#organ_tree").on("click","li .del",function () {
+    var node=$(this).parent().children("a").children("cite");
     parent.layer.confirm("是否删除此条记录?",{
         shade: false,
         btn: ['确定', '取消']
     }, function () {
-        closeAddShow();
+        $.ajax({
+            type: 'get',
+            url: '/organ/deleteOrgan',
+            data: {"organName":node.text()},
+            dataType: 'text',
+            success: function () {
+                showInfo("删除成功");
+                treeInit("zzjgwh");
+                closeAddShow();
+            },
+            error: function () {
+                showInfo("系统错误");
+            }
+        });
     })
 });
 
@@ -142,38 +168,6 @@ function buildChildren(organId) {
     return treeChild;
 }
 
-// $('#form_organ_edit').bootstrapValidator({
-//     message: 'This value is not valid',
-//     excluded: ':disabled',
-//     feedbackIcons: {
-//         valid: 'glyphicon glyphicon-ok',
-//         invalid: 'glyphicon glyphicon-remove',
-//         validating: 'glyphicon glyphicon-refresh'
-//     },
-//     fields: {
-//         organId: {
-//             message: '编号不能为空',//默认提示信息
-//             validators: {
-//                 notEmpty: {
-//                     message: '编号必填不能为空'
-//                 }
-//             }
-//         }
-//     }
-// }).on(
-//     'error.form.bv',
-//     function (e) {
-//         var $form = $(e.target), validator = $form
-//             .data('bootstrapValidator'), $invalidField = validator
-//             .getInvalidFields().eq(0), $collapse = $invalidField
-//             .parents('.collapse');
-//         $collapse.collapse('show');
-//     }).on('success.form.bv', function (e) {
-//     e.preventDefault();
-//     updateOrgan();
-//     return false;
-// });
-
 function updateOrgan() {
     $.ajax({
         type: "get",
@@ -181,10 +175,10 @@ function updateOrgan() {
         async: false,
         data: $("#form_organ_edit").serialize(),
         dataType: "text",
-        success: function (data) {
+        success: function () {
             showInfo("菜单保存成功");
         },
-        error: function (data) {
+        error: function () {
             showInfo("系统错误");
         }
     });
@@ -243,7 +237,7 @@ function insertOrgan() {
         type: "get",
         url: "/organ/insertOrgan",
         async: false,
-        data: $("#form_organ_edit").serialize(),
+        data: $("#form_organ_add").serialize(),
         dataType: "text",
         success: function () {
             showInfo("添加成功");

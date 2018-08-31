@@ -6,6 +6,9 @@ import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
+/**
+ * 角色管理DAO
+ */
 @Mapper
 public interface RoleManageDao {
 

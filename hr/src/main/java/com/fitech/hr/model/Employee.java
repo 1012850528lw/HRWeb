@@ -2,6 +2,9 @@ package com.fitech.hr.model;
 
 import java.sql.Date;
 
+/**
+ * 员工表
+ */
 public class Employee {
     private String employeeId; // 员工号
     private String organId; // 组织编号

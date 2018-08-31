@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="container" style="margin-top: 20px">
-        <form class="form-horizontal" id="form_organ_add">
+        <form class="form-horizontal layui-form" id="form_organ_add" lay-filter="organFormAdd">
             <div class="form-group">
                 <label class="col-sm-2 control-label">组织编号</label>
                 <div class="col-sm-4">

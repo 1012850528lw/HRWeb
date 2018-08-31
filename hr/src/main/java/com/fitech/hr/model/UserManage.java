@@ -2,6 +2,9 @@ package com.fitech.hr.model;
 
 import java.sql.Date;
 
+/**
+ * 用户表
+ */
 public class UserManage {
     private String employeeId;//员工号
     private String password;//密码

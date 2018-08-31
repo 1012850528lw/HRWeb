@@ -6,6 +6,9 @@ import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
+/**
+ * 用户管理DAO
+ */
 @Mapper
 public interface UserManageDAO {
 

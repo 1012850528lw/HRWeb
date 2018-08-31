@@ -6,6 +6,9 @@ import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
+/**
+ * 菜单管理DAO
+ */
 @Mapper
 public interface MenuManageDAO {
     /**

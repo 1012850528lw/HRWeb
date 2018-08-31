@@ -2,6 +2,9 @@ package com.fitech.hr.model;
 
 import java.sql.Date;
 
+/**
+ * 组织机构表
+ */
 public class OrganStruct {
     private String organId; // 组织编号
     private String pareOrganId; //上级组织编号

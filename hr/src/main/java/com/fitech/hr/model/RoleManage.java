@@ -2,16 +2,19 @@ package com.fitech.hr.model;
 
 import java.sql.Date;
 
+/**
+ * 角色表
+ */
 public class RoleManage {
-    private String roleId;
-    private String pareRoleId;
-    private String roleName;
-    private String roleTypeCode;
-    private String createEmployeeId;
-    private Date createTime;
-    private String mdyEmployeeId;
-    private Date mdyTime;
-    private String remark;
+    private String roleId; // 角色Id
+    private String pareRoleId; // 上级角色Id
+    private String roleName; //角色名称
+    private String roleTypeCode; //角色类型代码
+    private String createEmployeeId; // 创建员工号
+    private Date createTime; // 创建时间
+    private String mdyEmployeeId; //修改员工号
+    private Date mdyTime; // 修改时间
+    private String remark; //备注
 
     public String getRoleId() {
         return roleId;

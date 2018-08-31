@@ -1,5 +1,8 @@
 package com.fitech.hr.model;
 
+/**
+ * 菜单表
+ */
 public class MenuManage {
 
     private String menuId; // 菜单编号

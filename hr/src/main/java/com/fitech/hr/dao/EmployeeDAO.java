@@ -6,6 +6,9 @@ import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
+/**
+ * 员工维护DAO
+ */
 @Mapper
 public interface EmployeeDAO {
     /**

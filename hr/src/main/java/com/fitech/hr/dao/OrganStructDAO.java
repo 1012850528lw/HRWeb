@@ -6,6 +6,10 @@ import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
+/**
+ * 组织机构DAO
+ *
+ */
 @Mapper
 public interface OrganStructDAO {
 
@@ -23,6 +27,13 @@ public interface OrganStructDAO {
     Long countByRecord(OrganStruct record);
 
     /**
+     * 根据名称查询编号
+     * @param organName
+     * @return
+     */
+    OrganStruct selectIdByOrganName(String  organName);
+
+    /**
      * 更新数据
      * @param record
      * @return
@@ -35,6 +46,13 @@ public interface OrganStructDAO {
      * @return
      */
     int deleteByOrganId(String organId);
+
+    /**
+     * 根据名称删除
+     * @param organName
+     * @return
+     */
+    int deleteByOrganName(String organName);
 
     /**
      * 增加数据

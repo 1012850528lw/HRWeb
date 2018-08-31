@@ -103,6 +103,11 @@
         where ORGAN_ID = #{organId,jdbcType=VARCHAR}
     </delete>
 
+    <delete id="deleteByOrganName" parameterType="java.lang.String">
+        delete from hr_organ_struct
+        where ORGAN_NAME = #{organName,jdbcType=VARCHAR}
+    </delete>
+
     <insert id="insertOrgan" parameterType="com.fitech.hr.model.OrganStruct">
         insert into hr_organ_struct
         values(#{organId,jdbcType=VARCHAR}, #{pareOrganId,jdbcType=VARCHAR},#{organName,jdbcType=VARCHAR},
@@ -113,4 +118,11 @@
         #{createEmployeeId,jdbcType=VARCHAR},#{mdyEmployeeId,jdbcType=VARCHAR},#{createTime,jdbcType=DATE},
         #{mdyTime,jdbcType=DATE},#{post,jdbcType=VARCHAR},#{fax,jdbcType=VARCHAR},#{organLevel,jdbcType=VARCHAR})
     </insert>
+
+    <select id="selectIdByOrganName" parameterType="java.lang.String" resultMap="OrganStructResult">
+        select ORGAN_ID, PARE_ORGAN_ID
+        from hr_organ_struct
+        where ORGAN_NAME = #{organName,jdbcType=VARCHAR}
+    </select>
+
 </mapper>
