@@ -94,13 +94,17 @@ function tableInit(url) {
 
 function operationFormatter(value, row, index) {
     return [
-        '<span class="modifiedOperate" style="margin-left:5px;color: white;text-align: center;background: #fe5722;padding: 4px 16px;cursor: pointer;">修改</span>',
-        '<span class="deleteOperate" style="margin-left:5px;color: white;text-align: center;background: #fe5722;padding: 4px 16px;cursor: pointer;">删除</span>'
+        '  <button class="layui-btn layui-btn-primary layui-btn-sm" id="modifiedOperate">\n' +
+        '    <i class="layui-icon">&#xe642;</i>\n' +
+        '  </button>',
+        '  <button class="layui-btn layui-btn-primary layui-btn-sm" id="deleteOperate">\n' +
+        '    <i class="layui-icon">&#xe640;</i>\n' +
+        '  </button>'
     ].join('');
 }
 
 window.operateEvents = {
-    'click .modifiedOperate': function (e, value, row) {
+    'click #modifiedOperate': function (e, value, row) {
         parent.layer.open({
             type: 2,
             title: '修改菜单',
@@ -114,7 +118,7 @@ window.operateEvents = {
             }
         });
     },
-    'click .deleteOperate': function (e, value, row) {
+    'click #deleteOperate': function (e, value, row) {
         parent.layer.confirm("是否删除此条记录?",{
             shade: false,
             btn: ['确定', '取消']

@@ -20,12 +20,6 @@ function tableInit(url) {
         cardView: false,
         columns: [
             {
-                title: '操作',
-                align: 'center',
-                events: operateEvents,
-                formatter: operationFormatter
-            },
-            {
                 field: 'employeeId',
                 title: '员工号',
                 align: 'center',
@@ -276,6 +270,12 @@ function tableInit(url) {
                 title: '备注',
                 align: 'center',
                 formatter: emptyWidth
+            },
+            {
+                title: '操作',
+                align: 'center',
+                events: operateEvents,
+                formatter: operationFormatter
             }
         ]
     });
@@ -291,8 +291,12 @@ function tableInit(url) {
 function operationFormatter(value, row, index) {
     return [
         '<div style=\'width:150px;\'></div>',
-        '<span class="modifiedOperate" style="margin-left:5px;color: white;text-align: center;background: #fe5722;padding: 4px 16px;cursor: pointer;">修改</span>',
-        '<span class="deleteOperate" style="margin-left:5px;color: white;text-align: center;background: #fe5722;padding: 4px 16px;cursor: pointer;">删除</span>'
+        '  <button class="layui-btn layui-btn-primary layui-btn-sm" id="modifiedOperate">\n' +
+        '    <i class="layui-icon">&#xe642;</i>\n' +
+        '  </button>',
+        '  <button class="layui-btn layui-btn-primary layui-btn-sm" id="deleteOperate">\n' +
+        '    <i class="layui-icon">&#xe640;</i>\n' +
+        '  </button>'
     ].join('');
 }
 function emptyWidth(value, row, index) {

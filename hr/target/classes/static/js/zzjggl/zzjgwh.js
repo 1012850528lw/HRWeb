@@ -59,7 +59,6 @@ function treeInit(flag) {
                 }
             },"li","a");
         }
-
     });
 }
 //增加操作
